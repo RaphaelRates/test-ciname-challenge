@@ -149,7 +149,6 @@ ${SEARCH_MOVIES_TITLE}                     ${SEARCH_MOVIES_SECTION} h2
 
 #root=/movies/The Avengers - section=Movie Details
 
-
 ${MOVIE_DETAILS_SECTION}              main > div.movie-detail-page
 ${MOVIE_DETAILS_TITLE}                ${MOVIE_DETAILS_SECTION} > h1
 ${MOVIE_DETAILS_CONTAINER}            ${MOVIE_DETAILS_SECTION} > .movie-detail-container

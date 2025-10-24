@@ -1,805 +1,1333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2025-10-24T15:06:54.223283" rpa="false" schemaversion="5">
-<suite id="s1" name="Server" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server">
-<suite id="s1-s1" name="Auth" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth">
-<suite id="s1-s1-s1" name="Login" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth\login.robot">
-<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
-<msg time="2025-10-24T15:06:54.875992" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>cinema_api</arg>
-<arg>${URL_API}</arg>
-<arg>headers=${DEFAULT_HEADERS}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2025-10-24T16:05:04.510531" rpa="false" schemaversion="5">
+<suite id="s1" name="Web" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\web">
+<suite id="s1-s1" name="Auth" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\web\auth.robot">
+<test id="s1-s1-t1" name="TC001 - Verificar Elementos da Página de Login" line="12">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:04.998092" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\a6b40e0d-e34c-45cc-bc7d-d471fb2a2387"}</msg>
+<msg time="2025-10-24T16:05:05.026188" level="INFO">Starting Browser process C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60476</msg>
+<msg time="2025-10-24T16:05:06.250646" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\a6b40e0d-e34c-45cc-bc7d-d471fb2a2387"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:04.997084" elapsed="1.254562"/>
 </kw>
-<test id="s1-s1-s1-t1" name="Test Register New User" line="16">
-<kw name="Create API Session" owner="auth">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:54.875992" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${alias}</arg>
-<arg>${URL_API}</arg>
-<arg>headers=${DEFAULT_HEADERS}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:06.259827" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:06.287422" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:06.287422" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:06.251646" elapsed="0.035776"/>
 </kw>
-<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:04.995578" elapsed="1.292845"/>
 </kw>
-<kw name="Register User" owner="auth">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-24T15:06:54.875992" level="INFO">${payload} = {'name': 'John Doe', 'email': 'john@example.com', 'password': 'MyPassword123'}</msg>
-<var>${payload}</var>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:06.958236" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:06.290421" elapsed="0.667815"/>
 </kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:54.958356" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/register 
- path_url=/api/v1/auth/register 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '78'} 
- body=b'{"name": "John Doe", "email": "john@example.com", "password": "MyPassword123"}' 
- </msg>
-<msg time="2025-10-24T15:06:54.958356" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/register 
- status=400, reason=Bad Request 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '49', 'ETag': 'W/"31-WKEMg8zALB1Ko0WjUHi/6RBGHVc"', 'Date': 'Fri, 24 Oct 2025 18:06:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body={"success":false,"message":"User already exists"} 
- </msg>
-<msg time="2025-10-24T15:06:54.958356" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</msg>
-<var>${resp}</var>
-<arg>api</arg>
-<arg>/auth/register</arg>
-<arg>json=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.083357">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:07.084304" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:06.959235" elapsed="0.125069"/>
 </kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>${resp}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:06.288423" elapsed="0.795881"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+<kw name="Verificar Elementos da Página de Login" owner="login_form">
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:07.149397" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<arg>css=.login-form</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.084833" elapsed="0.064564"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${body['success'] is True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:07.182321" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<arg>css=.login-header h1</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.150386" elapsed="0.031935"/>
 </kw>
-<return>
-<value>${body}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
-</return>
-<var>${body}</var>
-<arg>John Doe</arg>
-<arg>john@example.com</arg>
-<arg>MyPassword123</arg>
-<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.084366">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.203974" level="INFO">Text: 'Login'</msg>
+<arg>css=.login-header h1</arg>
+<arg>==</arg>
+<arg>Login</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.182321" elapsed="0.021653"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\n[REGISTER SUCCESS ✅]\n${body}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:54.961445" elapsed="0.000000"/>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.224848" level="INFO">Text: 'Entre com suas credenciais para acessar sua conta'</msg>
+<arg>css=.login-header p</arg>
+<arg>contains</arg>
+<arg>Entre com suas credenciais</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.203974" elapsed="0.020874"/>
 </kw>
-<msg time="2025-10-24T15:06:54.986892" level="INFO">Starting Browser process C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59746</msg>
-<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.085453">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+<kw name="Get Element" owner="Browser">
+<msg time="2025-10-24T16:05:07.244938" level="INFO">Locator found successfully.</msg>
+<arg>id=email</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-10-24T16:05:07.224848" elapsed="0.020090"/>
+</kw>
+<kw name="Get Element" owner="Browser">
+<msg time="2025-10-24T16:05:07.258523" level="INFO">Locator found successfully.</msg>
+<arg>id=password</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-10-24T16:05:07.244938" elapsed="0.013585"/>
+</kw>
+<kw name="Get Element" owner="Browser">
+<msg time="2025-10-24T16:05:07.270546" level="INFO">Locator found successfully.</msg>
+<arg>css=.login-btn</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-10-24T16:05:07.259502" elapsed="0.011044"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.287861" level="INFO">Text: 'E-mail'</msg>
+<arg>css=label[for="email"]</arg>
+<arg>==</arg>
+<arg>E-mail</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.270546" elapsed="0.018319"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.303379" level="INFO">Text: 'Senha'</msg>
+<arg>css=label[for="password"]</arg>
+<arg>==</arg>
+<arg>Senha</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.288865" elapsed="0.014514"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-10-24T16:05:07.320343" level="INFO">Attribute is: 'Seu e-mail'</msg>
+<arg>id=email</arg>
+<arg>placeholder</arg>
+<arg>==</arg>
+<arg>Seu e-mail</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.304399" elapsed="0.015944"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-10-24T16:05:07.333587" level="INFO">Attribute is: 'Sua senha'</msg>
+<arg>id=password</arg>
+<arg>placeholder</arg>
+<arg>==</arg>
+<arg>Sua senha</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.321331" elapsed="0.012256"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:07.356540" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<arg>css=.form-group:nth-child(1) svg</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.333587" elapsed="0.022953"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:07.381408" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<arg>css=.form-group:nth-child(2) svg</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.356540" elapsed="0.024868"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.396303" level="INFO">Text: 'Não tem uma conta? Cadastre-se'</msg>
+<arg>css=.login-footer</arg>
+<arg>contains</arg>
+<arg>Não tem uma conta?</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.382403" elapsed="0.013900"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-10-24T16:05:07.411367" level="INFO">Text: 'Cadastrar'</msg>
+<arg>css=#root &gt; header &gt; div &gt; nav &gt; ul &gt; li:nth-child(4) &gt; a</arg>
+<arg>==</arg>
+<arg>Cadastrar</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.396303" elapsed="0.015064"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:07.084833" elapsed="0.326534"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:07.588616" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.413869" elapsed="0.174747"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:07.412354" elapsed="0.176262"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:07.833803" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.589666" elapsed="0.244137"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:07.589666" elapsed="0.244137"/>
+</kw>
+<doc>Deve verificar se todos os elementos da página de login estão presentes</doc>
+<status status="PASS" start="2025-10-24T16:05:04.994576" elapsed="2.840235"/>
 </test>
-<test id="s1-s1-s1-t2" name="Test Login Existing User" line="21">
-<kw name="Create API Session" owner="auth">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.521784" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${alias}</arg>
-<arg>${URL_API}</arg>
-<arg>headers=${DEFAULT_HEADERS}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<test id="s1-s1-t2" name="TC002 - Login Bem Sucedido com Credenciais Válidas" line="20">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:07.848358" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\d3755cc7-ba78-4b42-92e0-00ea5471e3ee"}</msg>
+<msg time="2025-10-24T16:05:08.043471" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\d3755cc7-ba78-4b42-92e0-00ea5471e3ee"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:07.847341" elapsed="0.196130"/>
 </kw>
-<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:08.050348" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:08.071411" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:08.071411" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.043471" elapsed="0.027940"/>
 </kw>
-<kw name="Login User" owner="auth">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.521784" level="INFO">${payload} = {'email': 'john@example.com', 'password': 'MyPassword123'}</msg>
-<var>${payload}</var>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:07.847341" elapsed="0.224070"/>
 </kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.521784" level="FAIL">Non-existing index or alias 'http://localhost:3000/api/v1'.</msg>
-<var>${resp}</var>
-<arg>${URL_API}</arg>
-<arg>/auth/login</arg>
-<arg>json=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.521784" elapsed="0.000000">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:08.656163" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.074925" elapsed="0.582246"/>
 </kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>${resp}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:08.760167" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.657171" elapsed="0.102996"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:08.073412" elapsed="0.687754"/>
 </kw>
-<return>
-<value>${body}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
-</return>
-<var>${body}</var>
-<arg>john@example.com</arg>
-<arg>MyPassword123</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.521784" elapsed="0.000000">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:08.763175" level="INFO">Fills the text 'raphaelrates.dev@gmail.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.762178" elapsed="0.021510"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\n[LOGIN SUCCESS ✅]\n${body}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:08.784694" level="INFO">Fills the text '12345678' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.783688" elapsed="0.022573"/>
 </kw>
-<status status="FAIL" start="2025-10-24T15:06:55.514937" elapsed="0.006847">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
-</test>
-<test id="s1-s1-s1-t3" name="Test Login Invalid Credentials" line="26">
-<kw name="Create API Session" owner="auth">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.536087" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${alias}</arg>
-<arg>${URL_API}</arg>
-<arg>headers=${DEFAULT_HEADERS}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-24T15:06:55.535449" elapsed="0.000638"/>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:08.807265" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.807265" elapsed="0.160885"/>
 </kw>
-<status status="PASS" start="2025-10-24T15:06:55.534377" elapsed="0.001710"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:10.970376" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:08.969155" elapsed="2.001221"/>
 </kw>
-<kw name="Login User" owner="auth">
-<msg time="2025-10-24T15:06:55.539143" level="FAIL">Variable '${expected_status}' not found.</msg>
-<var>${resp}</var>
-<arg>john@example.com</arg>
-<arg>WrongPass</arg>
-<arg>${expected_status}=400</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.536087" elapsed="0.003056">Variable '${expected_status}' not found.</status>
+<arg>raphaelrates.dev@gmail.com</arg>
+<arg>12345678</arg>
+<status status="PASS" start="2025-10-24T16:05:08.761166" elapsed="2.209210"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.540142" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be False">
-<arg>${body['success'] is True}</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.540142" elapsed="0.000716"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\n[LOGIN FAILED ❌]\n${body}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.540858" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2025-10-24T15:06:55.531009" elapsed="0.009849">Variable '${expected_status}' not found.</status>
-</test>
-<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
-<msg time="2025-10-24T15:06:55.543853" level="INFO">Deleting All Sessions</msg>
-<doc>Removes all the session objects</doc>
-<status status="PASS" start="2025-10-24T15:06:55.543853" elapsed="0.000000"/>
-</kw>
-<doc>Testes de login de usuário</doc>
-<status status="FAIL" start="2025-10-24T15:06:54.250907" elapsed="1.292946"/>
-</suite>
-<suite id="s1-s1-s2" name="Register" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth\register.robot">
-<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
-<msg time="2025-10-24T15:06:55.575473" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>cinema_api</arg>
-<arg>http://localhost:3000</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-24T15:06:55.574466" elapsed="0.001007"/>
-</kw>
-<test id="s1-s1-s2-t1" name="Teste Registro Usuario Valido Com Fixture" line="15">
-<kw name="Register User With Fixture" owner="auth">
-<kw name="Get Auth Fixture" owner="base">
-<kw name="Load JSON Fixture" owner="base">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.579561" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
-<var>${file_path}</var>
-<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.000000"/>
-</kw>
-<kw name="Get File" owner="OperatingSystem">
-<msg time="2025-10-24T15:06:55.579561" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
-<msg time="2025-10-24T15:06:55.580561" level="INFO">${json_data} = {
-  "valid_user": {
-    "name": "John2 Doe",
-    "email": "john2.doe@example.com",
-    "password": "SecurePass123!"
-  },
-  "invalid_user_email": {
-    "name": "Invalid User",
-    "email": "not-an-emai...</msg>
-<var>${json_data}</var>
-<arg>${file_path}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.001000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.580561" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
-<var>${all_fixtures}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000000"/>
-</kw>
-<if>
-<branch type="IF" condition="'${fixture_name}' != 'None'">
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-24T15:06:55.581555" level="INFO">${fixture} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
-<var>${fixture}</var>
-<arg>${all_fixtures}</arg>
-<arg>${fixture_name}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
-</return>
-<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000994"/>
-</branch>
-<branch type="ELSE">
-<return>
-<value>${all_fixtures}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
-</return>
-<status status="NOT RUN" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000994"/>
-</if>
-<msg time="2025-10-24T15:06:55.581555" level="INFO">${fixture} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
-<var>${fixture}</var>
-<arg>auth.json</arg>
-<arg>${fixture_name}</arg>
-<doc>Carrega um fixture JSON do arquivo</doc>
-<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.003000"/>
-</kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.582561" elapsed="0.000000"/>
-</return>
-<msg time="2025-10-24T15:06:55.582561" level="INFO">${user_data} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
-<var>${user_data}</var>
-<arg>${fixture_name}</arg>
-<status status="PASS" start="2025-10-24T15:06:55.578565" elapsed="0.003996"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${user_data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.582561" elapsed="0.000000"/>
-</kw>
-<kw name="Register User" owner="auth">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.586562" level="INFO">${payload} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
-<var>${payload}</var>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.586562" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.587560" level="FAIL">Non-existing index or alias 'api'.</msg>
-<var>${resp}</var>
-<arg>api</arg>
-<arg>/auth/register</arg>
-<arg>json=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.586562" elapsed="0.000998">Non-existing index or alias 'api'.</status>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>${resp}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${body['success'] is True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000999"/>
-</kw>
-<return>
-<value>${body}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
-</return>
-<var>${response}</var>
-<arg>${user_data['name']}</arg>
-<arg>${user_data['email']}</arg>
-<arg>${user_data['password']}</arg>
-<arg>${expected_status}</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.583563" elapsed="0.004996">Non-existing index or alias 'api'.</status>
-</kw>
-<return>
-<value>${response}</value>
-<value>${user_data}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
-</return>
-<var>${response}</var>
-<var>${user_data}</var>
-<arg>valid_user</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.578565" elapsed="0.009994">Non-existing index or alias 'api'.</status>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\n[REGISTER USER RESPONSE]\n${response.json()}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
-</kw>
-<kw name="Verify Response Success">
-<arg>${response}</arg>
-<arg>201</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
-</kw>
-<kw name="Extract User From Response">
-<var>${user}</var>
-<arg>${response}</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
-</kw>
-<kw name="Verify User Data Structure">
-<arg>${user}</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${user}[name]</arg>
-<arg>${user_data}[name]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${user}[email]</arg>
-<arg>${user_data}[email]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
-</kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response.json()}</arg>
-<arg>token</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.590563" elapsed="0.000000"/>
-</kw>
-<doc>Testa registro de usuário com fixture válida</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.575473" elapsed="0.015090">Non-existing index or alias 'api'.</status>
-</test>
-<test id="s1-s1-s2-t2" name="Teste Registro Usuario Randomico" line="28">
-<kw name="Register Random User" owner="auth">
-<kw name=" Generate User with Faker" owner="base">
-<kw name="Faker Name">
-<msg time="2025-10-24T15:06:55.600553" level="FAIL">No keyword with name 'Faker Name' found.</msg>
-<var>${random_name}</var>
-<status status="FAIL" start="2025-10-24T15:06:55.600553" elapsed="0.000000">No keyword with name 'Faker Name' found.</status>
-</kw>
-<kw name="Faker Email">
-<var>${random_email}</var>
-<status status="NOT RUN" start="2025-10-24T15:06:55.600553" elapsed="0.000000"/>
-</kw>
-<kw name="Faker Password">
-<var>${random_password}</var>
-<arg>length=12</arg>
-<arg>special_chars=True</arg>
-<arg>digits=True</arg>
-<arg>upper_case=True</arg>
-<arg>lower_case=True</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<var>&amp;{user_data}</var>
-<arg>name=${random_name}</arg>
-<arg>email=${random_email}</arg>
-<arg>password=${random_password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${user_data}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
-</return>
-<var>${user_data}</var>
-<doc>Gera dados aleatórios para registro de usuário</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.598554" elapsed="0.004006">No keyword with name 'Faker Name' found.</status>
-</kw>
-<kw name="Register User" owner="auth">
-<var>${response}</var>
-<arg>${user_data['name']}</arg>
-<arg>${user_data['email']}</arg>
-<arg>${user_data['password']}</arg>
-<arg>201</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.602560" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${response}</value>
-<value>${user_data}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.602560" elapsed="0.000996"/>
-</return>
-<var>${response}</var>
-<var>${user_data}</var>
-<doc>Registra um usuário com dados únicos gerados dinamicamente</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.597554" elapsed="0.006002">No keyword with name 'Faker Name' found.</status>
-</kw>
-<kw name="Verify Response Success">
-<arg>${response}</arg>
-<arg>201</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.604555" elapsed="0.000000"/>
-</kw>
-<kw name="Extract User From Response">
-<var>${user}</var>
-<arg>${response}</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.608446" elapsed="0.000000"/>
-</kw>
-<kw name="Verify User Data Structure">
-<arg>${user}</arg>
-<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${user}[name]</arg>
-<arg>${user_data}[name]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${user}[email]</arg>
-<arg>${user_data}[email]</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
-</kw>
-<doc>Testa registro de usuário com dados aleatórios</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.595554" elapsed="0.014973">No keyword with name 'Faker Name' found.</status>
-</test>
-<test id="s1-s1-s2-t3" name="Teste Registro Email Invalido Com Fixture" line="38">
-<kw name="Register User With Fixture" owner="auth">
-<kw name="Get Auth Fixture" owner="base">
-<kw name="Load JSON Fixture" owner="base">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.628097" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
-<var>${file_path}</var>
-<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.626087" elapsed="0.002010"/>
-</kw>
-<kw name="Get File" owner="OperatingSystem">
-<msg time="2025-10-24T15:06:55.628097" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
-<msg time="2025-10-24T15:06:55.628097" level="INFO">${json_data} = {
-  "valid_user": {
-    "name": "John2 Doe",
-    "email": "john2.doe@example.com",
-    "password": "SecurePass123!"
-  },
-  "invalid_user_email": {
-    "name": "Invalid User",
-    "email": "not-an-emai...</msg>
-<var>${json_data}</var>
-<arg>${file_path}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.628097" elapsed="0.002012"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.630109" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
-<var>${all_fixtures}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.000000"/>
-</kw>
-<if>
-<branch type="IF" condition="'${fixture_name}' != 'None'">
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-24T15:06:55.632117" level="INFO">${fixture} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
-<var>${fixture}</var>
-<arg>${all_fixtures}</arg>
-<arg>${fixture_name}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
-</kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
-</return>
-<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
-</branch>
-<branch type="ELSE">
-<return>
-<value>${all_fixtures}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
-</return>
-<status status="NOT RUN" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
-</if>
-<msg time="2025-10-24T15:06:55.632117" level="INFO">${fixture} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
-<var>${fixture}</var>
-<arg>auth.json</arg>
-<arg>${fixture_name}</arg>
-<doc>Carrega um fixture JSON do arquivo</doc>
-<status status="PASS" start="2025-10-24T15:06:55.626087" elapsed="0.006030"/>
-</kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
-</return>
-<msg time="2025-10-24T15:06:55.632117" level="INFO">${user_data} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
-<var>${user_data}</var>
-<arg>${fixture_name}</arg>
-<status status="PASS" start="2025-10-24T15:06:55.623526" elapsed="0.008591"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${user_data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
-</kw>
-<kw name="Register User" owner="auth">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.638091" level="INFO">${payload} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
-<var>${payload}</var>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.638091" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.639092" level="FAIL">Non-existing index or alias 'api'.</msg>
-<var>${resp}</var>
-<arg>api</arg>
-<arg>/auth/register</arg>
-<arg>json=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.639092" elapsed="0.001000">Non-existing index or alias 'api'.</status>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>${resp}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.640092" elapsed="0.001003"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${body['success'] is True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${body}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
-</return>
-<var>${response}</var>
-<arg>${user_data['name']}</arg>
-<arg>${user_data['email']}</arg>
-<arg>${user_data['password']}</arg>
-<arg>${expected_status}</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.634084" elapsed="0.009197">Non-existing index or alias 'api'.</status>
-</kw>
-<return>
-<value>${response}</value>
-<value>${user_data}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
-</return>
-<var>${response}</var>
-<var>${user_data}</var>
-<arg>invalid_user_email</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.623526" elapsed="0.019755">Non-existing index or alias 'api'.</status>
+<kw name="Verificar Login Bem Sucedido" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:10.973915" level="INFO">${current_url} = http://localhost:3002/</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:10.971391" elapsed="0.002524"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<arg>400</arg>
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:10.973915" elapsed="0.001003"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response.json()}[success]</arg>
-<arg>${False}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:10.981822" level="INFO">Waited for Element with selector css=#root &gt; header &gt; div &gt; nav &gt; ul &gt; li:nth-child(4) &gt; a at state visible</msg>
+<arg>css=#root &gt; header &gt; div &gt; nav &gt; ul &gt; li:nth-child(4) &gt; a</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:10.974918" elapsed="0.006904"/>
 </kw>
-<doc>Testa registro com email inválido usando fixture</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.619529" elapsed="0.023752">Non-existing index or alias 'api'.</status>
+<doc>Verifica se o login foi bem-sucedido e se o link do menu está visível</doc>
+<status status="PASS" start="2025-10-24T16:05:10.970376" elapsed="0.011446"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:11.085217" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:10.981822" elapsed="0.103395"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:10.981822" elapsed="0.103395"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:11.324684" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:11.086155" elapsed="0.238529"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:11.085217" elapsed="0.239467"/>
+</kw>
+<doc>Deve realizar login com sucesso usando credenciais válidas</doc>
+<status status="PASS" start="2025-10-24T16:05:07.843325" elapsed="3.482867"/>
 </test>
-<test id="s1-s1-s2-t4" name="Teste Registro Senha Curta Com Fixture" line="44">
-<kw name="Register User With Fixture" owner="auth">
-<kw name="Get Auth Fixture" owner="base">
-<kw name="Load JSON Fixture" owner="base">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
-<var>${file_path}</var>
-<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<test id="s1-s1-t3" name="TC003 - Login com Email Inválido" line="29">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:11.338228" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\17e64e94-d59e-47c2-9da0-8f6d27855009"}</msg>
+<msg time="2025-10-24T16:05:11.543154" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\17e64e94-d59e-47c2-9da0-8f6d27855009"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:11.337227" elapsed="0.205927"/>
 </kw>
-<kw name="Get File" owner="OperatingSystem">
-<msg time="2025-10-24T15:06:55.661061" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${json_data} = {
-  "valid_user": {
-    "name": "John2 Doe",
-    "email": "john2.doe@example.com",
-    "password": "SecurePass123!"
-  },
-  "invalid_user_email": {
-    "name": "Invalid User",
-    "email": "not-an-emai...</msg>
-<var>${json_data}</var>
-<arg>${file_path}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:11.550115" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:11.567281" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:11.567281" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:11.543677" elapsed="0.023604"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
-<var>${all_fixtures}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:11.336217" elapsed="0.231064"/>
 </kw>
-<if>
-<branch type="IF" condition="'${fixture_name}' != 'None'">
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${fixture} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
-<var>${fixture}</var>
-<arg>${all_fixtures}</arg>
-<arg>${fixture_name}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:12.153867" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:11.569282" elapsed="0.585594"/>
 </kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</return>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<return>
-<value>${all_fixtures}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</return>
-<status status="NOT RUN" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</if>
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${fixture} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
-<var>${fixture}</var>
-<arg>auth.json</arg>
-<arg>${fixture_name}</arg>
-<doc>Carrega um fixture JSON do arquivo</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:12.246520" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.154876" elapsed="0.091644"/>
 </kw>
-<return>
-<value>${fixture}</value>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</return>
-<msg time="2025-10-24T15:06:55.661061" level="INFO">${user_data} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
-<var>${user_data}</var>
-<arg>${fixture_name}</arg>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:11.568282" elapsed="0.678238"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${user_data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
-</kw>
-<kw name="Register User" owner="auth">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-24T15:06:55.669547" level="INFO">${payload} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
-<var>${payload}</var>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-24T15:06:55.669547" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-24T15:06:55.670565" level="FAIL">Non-existing index or alias 'api'.</msg>
-<var>${resp}</var>
-<arg>api</arg>
-<arg>/auth/register</arg>
-<arg>json=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.669547" elapsed="0.001018">Non-existing index or alias 'api'.</status>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>${resp}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${body}</var>
-<arg>${resp.json()}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${body['success'] is True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000941"/>
+<kw name="Gerar Email Aleatório" owner="login_form">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-24T16:05:12.247518" level="INFO">${random_string} = wxybjclb</msg>
+<var>${random_string}</var>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.247518" elapsed="0.000000"/>
 </kw>
 <return>
-<value>${body}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.671506" elapsed="0.000000"/>
+<value>${random_string}@example.com</value>
+<status status="PASS" start="2025-10-24T16:05:12.248519" elapsed="0.000000"/>
 </return>
-<var>${response}</var>
-<arg>${user_data['name']}</arg>
-<arg>${user_data['email']}</arg>
-<arg>${user_data['password']}</arg>
-<arg>${expected_status}</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.661061" elapsed="0.010445">Non-existing index or alias 'api'.</status>
+<msg time="2025-10-24T16:05:12.248519" level="INFO">${email_invalido} = wxybjclb@example.com</msg>
+<var>${email_invalido}</var>
+<status status="PASS" start="2025-10-24T16:05:12.247518" elapsed="0.001001"/>
 </kw>
-<return>
-<value>${response}</value>
-<value>${user_data}</value>
-<status status="NOT RUN" start="2025-10-24T15:06:55.671506" elapsed="0.000000"/>
-</return>
-<var>${response}</var>
-<var>${user_data}</var>
-<arg>invalid_user_password</arg>
-<status status="FAIL" start="2025-10-24T15:06:55.660515" elapsed="0.010991">Non-existing index or alias 'api'.</status>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:12.249533" level="INFO">Fills the text 'wxybjclb@example.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.249533" elapsed="0.019701"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:12.270235" level="INFO">Fills the text 'qualquerSenha123' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.269234" elapsed="0.021085"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:12.292318" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.291312" elapsed="0.151925"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:14.444628" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:12.443237" elapsed="2.001391"/>
+</kw>
+<arg>${email_invalido}</arg>
+<arg>qualquerSenha123</arg>
+<status status="PASS" start="2025-10-24T16:05:12.248519" elapsed="2.196109"/>
+</kw>
+<kw name="Verificar Erro Login" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:14.449166" level="INFO">${current_url} = http://localhost:3002/login</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:14.444628" elapsed="0.004538"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<arg>400</arg>
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/login</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.672505" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-24T16:05:14.449166" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response.json()}[success]</arg>
-<arg>${False}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-10-24T15:06:55.672505" elapsed="0.000000"/>
+<doc>Verifica se o login deu errado</doc>
+<status status="PASS" start="2025-10-24T16:05:14.444628" elapsed="0.004538"/>
 </kw>
-<doc>Testa registro com senha curta usando fixture</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.656145" elapsed="0.016360">Non-existing index or alias 'api'.</status>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:14.611012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:14.450175" elapsed="0.160837"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:14.450175" elapsed="0.160837"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:14.881335" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:14.612013" elapsed="0.269322"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:14.612013" elapsed="0.270323"/>
+</kw>
+<doc>Deve exibir mensagem de erro ao tentar login com email inválido</doc>
+<status status="PASS" start="2025-10-24T16:05:11.333708" elapsed="3.548628"/>
 </test>
-<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
-<msg time="2025-10-24T15:06:55.683661" level="INFO">Deleting All Sessions</msg>
-<doc>Removes all the session objects</doc>
-<status status="PASS" start="2025-10-24T15:06:55.683661" elapsed="0.000000"/>
+<test id="s1-s1-t4" name="TC004 - Login com Senha Inválida" line="40">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:14.892362" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\071bd505-fd89-4d62-930b-0ef5cf062e29"}</msg>
+<msg time="2025-10-24T16:05:15.084168" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\071bd505-fd89-4d62-930b-0ef5cf062e29"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:14.891365" elapsed="0.192803"/>
 </kw>
-<doc>Testes de registro de usuário</doc>
-<status status="FAIL" start="2025-10-24T15:06:55.553344" elapsed="0.130317"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:15.089167" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:15.103215" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:15.103215" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.084168" elapsed="0.019047"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:14.890369" elapsed="0.212846"/>
+</kw>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:15.723531" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.104602" elapsed="0.618929"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:15.843145" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.723531" elapsed="0.119614"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:15.104602" elapsed="0.738543"/>
+</kw>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:15.845151" level="INFO">Fills the text 'user@example.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.845151" elapsed="0.023095"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:15.869245" level="INFO">Fills the text 'senhaErrada123' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.869245" elapsed="0.020163"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:15.890477" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:15.889408" elapsed="0.204020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:18.094824" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:16.093428" elapsed="2.001396"/>
+</kw>
+<arg>user@example.com</arg>
+<arg>senhaErrada123</arg>
+<status status="PASS" start="2025-10-24T16:05:15.844154" elapsed="2.250670"/>
+</kw>
+<kw name="Verificar Erro Login" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:18.098272" level="INFO">${current_url} = http://localhost:3002/login</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.095228" elapsed="0.003044"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/login</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.098272" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se o login deu errado</doc>
+<status status="PASS" start="2025-10-24T16:05:18.095228" elapsed="0.003044"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:18.266410" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.099270" elapsed="0.169154"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:18.099270" elapsed="0.169154"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:18.533143" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.269421" elapsed="0.263722"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:18.269421" elapsed="0.263722"/>
+</kw>
+<doc>Deve exibir mensagem de erro ao tentar login com senha inválida</doc>
+<status status="PASS" start="2025-10-24T16:05:14.888359" elapsed="3.645793"/>
+</test>
+<test id="s1-s1-t5" name="TC005 - Login com Campos Vazios" line="50">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:18.543654" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\cb54aa6b-fcec-40cc-bdf6-aa04cf7e8b4f"}</msg>
+<msg time="2025-10-24T16:05:18.745150" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\cb54aa6b-fcec-40cc-bdf6-aa04cf7e8b4f"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.543149" elapsed="0.203000"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:18.754676" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:18.773264" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:18.773264" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.746149" elapsed="0.027115"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:18.543149" elapsed="0.230115"/>
+</kw>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:19.370153" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:18.775415" elapsed="0.594738"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:19.467153" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:19.371155" elapsed="0.095998"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:18.774416" elapsed="0.692737"/>
+</kw>
+<kw name="Verificar Validação Campos Obrigatórios" owner="login_form">
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:19.469151" level="INFO">Clicks the element 'css=.login-btn'.</msg>
+<arg>css=.login-btn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:19.469151" elapsed="0.180160"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:19.748417" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'focused']</msg>
+<arg>id=email</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:19.650304" elapsed="0.098113"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:19.798601" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused']</msg>
+<arg>id=password</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:19.748417" elapsed="0.050184"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:19.468153" elapsed="0.330448"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:20.070279" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:19.799602" elapsed="0.270677"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:19.799602" elapsed="0.270677"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:20.368584" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:20.071276" elapsed="0.297308"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:20.071276" elapsed="0.297308"/>
+</kw>
+<doc>Deve validar campos obrigatórios ao tentar login com campos vazios</doc>
+<status status="PASS" start="2025-10-24T16:05:18.540149" elapsed="1.828435"/>
+</test>
+<test id="s1-s1-t6" name="TC006 - Navegar para Página de Registro" line="59">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:20.381123" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\e13217f9-48c9-414c-a1b7-32cc1f43aa07"}</msg>
+<msg time="2025-10-24T16:05:20.583864" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\e13217f9-48c9-414c-a1b7-32cc1f43aa07"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:20.380114" elapsed="0.203750"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:20.590385" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:20.607467" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:20.607467" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:20.584868" elapsed="0.022599"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:20.378605" elapsed="0.228862"/>
+</kw>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:21.221802" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:20.609462" elapsed="0.613848"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:21.344173" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.223310" elapsed="0.120863"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:20.608463" elapsed="0.736713"/>
+</kw>
+<kw name="Clicar Link Registrar" owner="login_form">
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:21.347698" level="INFO">Clicks the element 'css=#root &gt; main &gt; div &gt; div &gt; div.login-footer &gt; p &gt; a'.</msg>
+<arg>css=#root &gt; main &gt; div &gt; div &gt; div.login-footer &gt; p &gt; a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.346687" elapsed="0.190463"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:21.552208" level="INFO">Waited for Element with selector css=.register-form at state visible</msg>
+<arg>css=.register-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.538160" elapsed="0.015051"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:21.345176" elapsed="0.208035"/>
+</kw>
+<kw name="Verificar Página Registro Carregou" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<arg>contains</arg>
+<arg>/register</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.553211" elapsed="0.006006"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2025-10-24T16:05:21.651506" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<arg>css=.register-form</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.560210" elapsed="0.091296"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:21.553211" elapsed="0.098295"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:21.945134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.652504" elapsed="0.292630"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:21.651506" elapsed="0.293628"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:22.163212" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:21.947650" elapsed="0.216068"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:21.946641" elapsed="0.217077"/>
+</kw>
+<doc>Deve navegar para página de registro ao clicar no link</doc>
+<status status="PASS" start="2025-10-24T16:05:20.375092" elapsed="1.788626"/>
+</test>
+<test id="s1-s1-t7" name="TC007 - Login com Email Mal Formatado" line="68">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:22.173274" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\d99be633-55d0-43ed-b2cb-d7065d40b30c"}</msg>
+<msg time="2025-10-24T16:05:22.377363" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\d99be633-55d0-43ed-b2cb-d7065d40b30c"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:22.172256" elapsed="0.205107"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:22.383869" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:22.400448" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:22.401445" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:22.378368" elapsed="0.023077"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:22.172256" elapsed="0.229189"/>
+</kw>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:22.989281" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:22.403953" elapsed="0.585328"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:23.114655" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:22.989281" elapsed="0.125906"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:22.403445" elapsed="0.712272"/>
+</kw>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:23.117777" level="INFO">Fills the text 'email-invalido' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:23.117239" elapsed="0.043756"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:23.162582" level="INFO">Fills the text 'senha123' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:23.161522" elapsed="0.020117"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:23.183144" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:23.181639" elapsed="0.144626"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:25.327406" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:23.326265" elapsed="2.001645"/>
+</kw>
+<arg>email-invalido</arg>
+<arg>senha123</arg>
+<status status="PASS" start="2025-10-24T16:05:23.115717" elapsed="2.212193"/>
+</kw>
+<kw name="Verificar Erro Login" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:25.338472" level="INFO">${current_url} = http://localhost:3002/login</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:25.328919" elapsed="0.010550"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/login</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-24T16:05:25.340483" elapsed="0.000984"/>
+</kw>
+<doc>Verifica se o login deu errado</doc>
+<status status="PASS" start="2025-10-24T16:05:25.327910" elapsed="0.013557"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:25.666457" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-7.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-7.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:25.344001" elapsed="0.323466"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:25.342467" elapsed="0.325000"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:25.899751" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:25.670475" elapsed="0.230275"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:25.668469" elapsed="0.232281"/>
+</kw>
+<doc>Deve validar formato de email incorreto</doc>
+<status status="PASS" start="2025-10-24T16:05:22.168260" elapsed="3.732490"/>
+</test>
+<test id="s1-s1-t8" name="TC008 - Login com Múltiplas Tentativas" line="78">
+<kw name="Configurar Teste" owner="login_form">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-24T16:05:25.908284" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\f8c803cb-1105-447a-84a3-1666a2fc5122"}</msg>
+<msg time="2025-10-24T16:05:26.097441" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\traces\\temp\\f8c803cb-1105-447a-84a3-1666a2fc5122"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:25.908284" elapsed="0.189157"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-24T16:05:26.104530" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-24T16:05:26.121576" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-24T16:05:26.122576" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.098443" elapsed="0.024133"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:25.907288" elapsed="0.215288"/>
+</kw>
+<kw name="Abrir Página de Login" owner="login_form">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-24T16:05:26.734948" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/login</msg>
+<arg>http://localhost:3002/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.125100" elapsed="0.611358"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:26.827487" level="INFO">Waited for Element with selector css=.login-form at state visible</msg>
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.736458" elapsed="0.091029"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:26.123577" elapsed="0.704929"/>
+</kw>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:26.831499" level="INFO">Fills the text 'user@example.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.829492" elapsed="0.032815"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:26.863318" level="INFO">Fills the text 'senhaErrada1' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.862307" elapsed="0.017884"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:26.881197" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:26.880191" elapsed="0.147443"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:29.028974" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:27.028632" elapsed="2.000342"/>
+</kw>
+<arg>user@example.com</arg>
+<arg>senhaErrada1</arg>
+<status status="PASS" start="2025-10-24T16:05:26.828506" elapsed="2.200468"/>
+</kw>
+<kw name="Verificar Erro Login" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:29.031983" level="INFO">${current_url} = http://localhost:3002/login</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.029982" elapsed="0.002001"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/login</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.033502" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se o login deu errado</doc>
+<status status="PASS" start="2025-10-24T16:05:29.028974" elapsed="0.004528"/>
+</kw>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:29.034510" level="INFO">Fills the text 'emailerrado@teste.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.034510" elapsed="0.020250"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:29.056272" level="INFO">Fills the text 'password123' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.054760" elapsed="0.021748"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:29.077513" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.076508" elapsed="0.033946"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:31.112029" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:29.110454" elapsed="2.001575"/>
+</kw>
+<arg>emailerrado@teste.com</arg>
+<arg>password123</arg>
+<status status="PASS" start="2025-10-24T16:05:29.033502" elapsed="2.078527"/>
+</kw>
+<kw name="Verificar Erro Login" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:31.116259" level="INFO">${current_url} = http://localhost:3002/login</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.112029" elapsed="0.004230"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/login</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.116259" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se o login deu errado</doc>
+<status status="PASS" start="2025-10-24T16:05:31.112029" elapsed="0.004230"/>
+</kw>
+<kw name="Preencher Formulário de Login" owner="login_form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:31.118276" level="INFO">Fills the text 'raphaelrates.dev@gmail.com' in the given field.</msg>
+<arg>css=#email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.117276" elapsed="0.028208"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-10-24T16:05:31.146486" level="INFO">Fills the text '12345678' in the given field.</msg>
+<arg>css=#password</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.145484" elapsed="0.024706"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-24T16:05:31.171191" level="INFO">Clicks the element 'css=main &gt; div &gt; div &gt; form &gt; button'.</msg>
+<arg>css=main &gt; div &gt; div &gt; form &gt; button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.170190" elapsed="0.040384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-24T16:05:33.212757" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-24T16:05:31.210574" elapsed="2.002183"/>
+</kw>
+<arg>raphaelrates.dev@gmail.com</arg>
+<arg>12345678</arg>
+<status status="PASS" start="2025-10-24T16:05:31.117276" elapsed="2.095481"/>
+</kw>
+<kw name="Verificar Login Bem Sucedido" owner="login_form">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-24T16:05:33.216281" level="INFO">${current_url} = http://localhost:3002/</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-24T16:05:33.213268" elapsed="0.003013"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>http://localhost:3002/</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-24T16:05:33.216281" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-24T16:05:33.224897" level="INFO">Waited for Element with selector css=#root &gt; header &gt; div &gt; nav &gt; ul &gt; li:nth-child(4) &gt; a at state visible</msg>
+<arg>css=#root &gt; header &gt; div &gt; nav &gt; ul &gt; li:nth-child(4) &gt; a</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-24T16:05:33.216281" elapsed="0.008616"/>
+</kw>
+<doc>Verifica se o login foi bem-sucedido e se o link do menu está visível</doc>
+<status status="PASS" start="2025-10-24T16:05:33.213268" elapsed="0.011629"/>
+</kw>
+<kw name="Tirar Print" owner="login_form">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-10-24T16:05:33.329803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-8.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-8.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-10-24T16:05:33.226420" elapsed="0.103383"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:33.224897" elapsed="0.104906"/>
+</kw>
+<kw name="Finalizar Teste" owner="login_form">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-24T16:05:33.556130" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-24T16:05:33.330798" elapsed="0.225332"/>
+</kw>
+<status status="PASS" start="2025-10-24T16:05:33.330798" elapsed="0.225332"/>
+</kw>
+<doc>Teste de tentativas consecutivas de login</doc>
+<status status="PASS" start="2025-10-24T16:05:25.904284" elapsed="7.652852"/>
+</test>
+<doc>Recursos relacionados à autenticação de usuários via interface web</doc>
+<status status="PASS" start="2025-10-24T16:05:04.537413" elapsed="29.024723"/>
 </suite>
-<status status="FAIL" start="2025-10-24T15:06:54.244126" elapsed="1.447305"/>
-</suite>
-<status status="FAIL" start="2025-10-24T15:06:54.223283" elapsed="1.468148"/>
+<status status="PASS" start="2025-10-24T16:05:04.512530" elapsed="29.054758"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="7" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Server" id="s1" pass="0" fail="7" skip="0">Server</stat>
-<stat name="Auth" id="s1-s1" pass="0" fail="7" skip="0">Server.Auth</stat>
-<stat name="Login" id="s1-s1-s1" pass="0" fail="3" skip="0">Server.Auth.Login</stat>
-<stat name="Register" id="s1-s1-s2" pass="0" fail="4" skip="0">Server.Auth.Register</stat>
+<stat name="Web" id="s1" pass="8" fail="0" skip="0">Web</stat>
+<stat name="Auth" id="s1-s1" pass="8" fail="0" skip="0">Web.Auth</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 30: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 36: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 44: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-10-24T15:06:54.806551" level="ERROR">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\base.resource' on line 11: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
+<msg time="2025-10-24T16:05:04.900630" level="ERROR">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\base.resource' on line 11: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
 Traceback (most recent call last):
   None
 PYTHONPATH:
@@ -812,18 +1340,7 @@ PYTHONPATH:
   C:\Users\raphael\anaconda3\Lib\site-packages\win32
   C:\Users\raphael\anaconda3\Lib\site-packages\win32\lib
   C:\Users\raphael\anaconda3\Lib\site-packages\Pythonwin</msg>
-<msg time="2025-10-24T15:06:55.568465" level="ERROR">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\base.resource' on line 11: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\raphael\anaconda3\Scripts\robot.exe
-  C:\Users\raphael\anaconda3\python312.zip
-  C:\Users\raphael\anaconda3\DLLs
-  C:\Users\raphael\anaconda3\Lib
-  C:\Users\raphael\anaconda3
-  C:\Users\raphael\anaconda3\Lib\site-packages
-  C:\Users\raphael\anaconda3\Lib\site-packages\win32
-  C:\Users\raphael\anaconda3\Lib\site-packages\win32\lib
-  C:\Users\raphael\anaconda3\Lib\site-packages\Pythonwin</msg>
+<msg time="2025-10-24T16:05:04.983471" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\components\auth\login_form.resource' on line 66: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-24T16:05:04.983471" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\components\auth\login_form.resource' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

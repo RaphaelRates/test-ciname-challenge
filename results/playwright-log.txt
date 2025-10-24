@@ -1,4 +1,90 @@
-{"level":30,"time":"2025-10-24T18:06:55.488Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:59746"}
+{"level":30,"time":"2025-10-24T19:05:05.672Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:60476"}
+{"level":30,"time":"2025-10-24T19:05:06.063Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:06.249Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:06.249Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:06.250Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:06.265Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:06.265Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:06.266Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@6eee4ae32073c7e01d479ee8dda81b39\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=b7c55ed1-ed65-4233-abb9-44dfa648e182\"}"}
+{"level":30,"time":"2025-10-24T19:05:06.266Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:06.284Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=56a8aa8a-82a7-47ec-be58-3fd9e0480ab7 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:06.284Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=56a8aa8a-82a7-47ec-be58-3fd9e0480ab7"}
+{"level":30,"time":"2025-10-24T19:05:06.285Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:06.297Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:06.297Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@6eee4ae32073c7e01d479ee8dda81b39\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=56a8aa8a-82a7-47ec-be58-3fd9e0480ab7\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@52036e1aff76fb8c73d76ec82b91d2b5\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=b7c55ed1-ed65-4233-abb9-44dfa648e182\"}"}
+{"level":30,"time":"2025-10-24T19:05:06.493Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:06.494Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:06.952Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:06.992Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:06.992Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:07.083Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:07.089Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.089Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:07.112Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element css=.login-form is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('.login-form')\u001b[22m\n"}
+{"level":30,"time":"2025-10-24T19:05:07.112Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:07.147Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.153Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.153Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-header h1 in page."}
+{"level":30,"time":"2025-10-24T19:05:07.168Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element css=.login-header h1 is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('.login-header h1')\u001b[22m\n"}
+{"level":30,"time":"2025-10-24T19:05:07.168Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:07.181Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.186Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.186Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-header h1 in page."}
+{"level":30,"time":"2025-10-24T19:05:07.202Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=.login-header h1 containing Login"}
+{"level":30,"time":"2025-10-24T19:05:07.202Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.208Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.208Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-header p in page."}
+{"level":30,"time":"2025-10-24T19:05:07.223Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=.login-header p containing Entre com suas credenciais para acessar sua conta"}
+{"level":30,"time":"2025-10-24T19:05:07.223Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.229Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.230Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2025-10-24T19:05:07.242Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.250Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.250Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-10-24T19:05:07.258Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.264Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.265Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-btn in page."}
+{"level":30,"time":"2025-10-24T19:05:07.269Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElement"}
+{"level":30,"time":"2025-10-24T19:05:07.272Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.272Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=label[for=\"email\"] in page."}
+{"level":30,"time":"2025-10-24T19:05:07.286Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=label[for=\"email\"] containing E-mail"}
+{"level":30,"time":"2025-10-24T19:05:07.286Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.291Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.291Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=label[for=\"password\"] in page."}
+{"level":30,"time":"2025-10-24T19:05:07.301Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=label[for=\"password\"] containing Senha"}
+{"level":30,"time":"2025-10-24T19:05:07.302Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.307Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-10-24T19:05:07.307Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2025-10-24T19:05:07.320Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved attribute for element id=email containing Seu e-mail"}
+{"level":30,"time":"2025-10-24T19:05:07.320Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-10-24T19:05:07.325Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-10-24T19:05:07.325Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-10-24T19:05:07.332Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved attribute for element id=password containing Sua senha"}
+{"level":30,"time":"2025-10-24T19:05:07.332Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-10-24T19:05:07.335Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.335Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.form-group:nth-child(1) svg in page."}
+{"level":30,"time":"2025-10-24T19:05:07.347Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element css=.form-group:nth-child(1) svg is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('.form-group:nth-child(1) svg')\u001b[22m\n"}
+{"level":30,"time":"2025-10-24T19:05:07.347Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:07.355Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.360Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.360Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.form-group:nth-child(2) svg in page."}
+{"level":30,"time":"2025-10-24T19:05:07.370Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element css=.form-group:nth-child(2) svg is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('.form-group:nth-child(2) svg')\u001b[22m\n"}
+{"level":30,"time":"2025-10-24T19:05:07.370Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:07.381Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:07.384Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.384Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-footer in page."}
+{"level":30,"time":"2025-10-24T19:05:07.395Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=.login-footer containing Não tem uma conta? Cadastre-se"}
+{"level":30,"time":"2025-10-24T19:05:07.395Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.399Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.399Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#root > header > div > nav > ul > li:nth-child(4) > a in page."}
+{"level":30,"time":"2025-10-24T19:05:07.410Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Retrieved text for element css=#root > header > div > nav > ul > li:nth-child(4) > a containing Cadastrar"}
+{"level":30,"time":"2025-10-24T19:05:07.410Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getText"}
+{"level":30,"time":"2025-10-24T19:05:07.419Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:07.419Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:07.587Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:07.592Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:07.611Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=d4b73ae1-02fd-4650-a8f6-c5c7add05292 from context=56a8aa8a-82a7-47ec-be58-3fd9e0480ab7 page stack"}
+{"level":30,"time":"2025-10-24T19:05:07.832Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -12,10 +98,47 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.515Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.516Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.519Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.519Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:07.842Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:07.842Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:07.846Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:07.846Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:07.850Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:08.042Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:08.042Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:08.042Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:08.055Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:08.055Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:08.055Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3d2aa848949ed5eea6e7b21aac44dbd5\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=58a940a4-747e-4d03-8283-40eea963709a\"}"}
+{"level":30,"time":"2025-10-24T19:05:08.055Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:08.069Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=89ae52af-22bd-43fe-b026-a261be11d67a to 10000"}
+{"level":30,"time":"2025-10-24T19:05:08.069Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=89ae52af-22bd-43fe-b026-a261be11d67a"}
+{"level":30,"time":"2025-10-24T19:05:08.069Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:08.081Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:08.081Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3d2aa848949ed5eea6e7b21aac44dbd5\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=89ae52af-22bd-43fe-b026-a261be11d67a\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@84ef5c14e9ad51d87c05edae8ee65332\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=58a940a4-747e-4d03-8283-40eea963709a\"}"}
+{"level":30,"time":"2025-10-24T19:05:08.278Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:08.278Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:08.655Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:08.663Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:08.663Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:08.759Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:08.765Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:08.765Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:08.781Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:08.786Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:08.786Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:08.805Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:08.810Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:08.811Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:08.965Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:10.977Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:10.977Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#root > header > div > nav > ul > li:nth-child(4) > a in page."}
+{"level":30,"time":"2025-10-24T19:05:10.981Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:10.987Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:10.987Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:11.084Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:11.088Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:11.105Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=1a037a40-1518-4d56-b06a-7e292db4caee from context=89ae52af-22bd-43fe-b026-a261be11d67a page stack"}
+{"level":30,"time":"2025-10-24T19:05:11.323Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -29,10 +152,44 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.528Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.528Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.531Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.531Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:11.331Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:11.331Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:11.335Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:11.335Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:11.340Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:11.541Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:11.541Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:11.541Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:11.554Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:11.554Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:11.554Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@904a7ba3e31f9c9f6e4f92be4b87acb5\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=547de742-ac24-492d-9686-6863f7714c07\"}"}
+{"level":30,"time":"2025-10-24T19:05:11.554Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:11.564Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=82a7f53b-9f27-4d58-afd8-68006afb0d78 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:11.564Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=82a7f53b-9f27-4d58-afd8-68006afb0d78"}
+{"level":30,"time":"2025-10-24T19:05:11.564Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:11.574Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:11.574Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@904a7ba3e31f9c9f6e4f92be4b87acb5\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=82a7f53b-9f27-4d58-afd8-68006afb0d78\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@7d5f984cf58cb661c6846237a6540b39\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=547de742-ac24-492d-9686-6863f7714c07\"}"}
+{"level":30,"time":"2025-10-24T19:05:11.773Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:11.773Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:12.153Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:12.158Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:12.158Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:12.245Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:12.251Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:12.251Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:12.267Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:12.273Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:12.273Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:12.288Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:12.294Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:12.294Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:12.441Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:14.455Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:14.455Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:14.608Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:14.614Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:14.632Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=ccf5e048-ce37-48a3-9cdd-46e4789b916c from context=82a7f53b-9f27-4d58-afd8-68006afb0d78 page stack"}
+{"level":30,"time":"2025-10-24T19:05:14.881Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -46,8 +203,44 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.544Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.544Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:14.887Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:14.887Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:14.890Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:14.890Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:14.894Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:15.083Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:15.083Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:15.083Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:15.092Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:15.092Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:15.092Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@8f3e2f1362821200bc2fe9ca7d1f3673\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=792b285e-11ef-434f-b91f-e7a5736d610c\"}"}
+{"level":30,"time":"2025-10-24T19:05:15.092Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:15.101Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=3008291e-99a5-466d-8486-ecc9b41546ca to 10000"}
+{"level":30,"time":"2025-10-24T19:05:15.101Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=3008291e-99a5-466d-8486-ecc9b41546ca"}
+{"level":30,"time":"2025-10-24T19:05:15.101Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:15.108Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:15.108Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@8f3e2f1362821200bc2fe9ca7d1f3673\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=3008291e-99a5-466d-8486-ecc9b41546ca\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@c30f5571adab7f024289709b812c46ee\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=792b285e-11ef-434f-b91f-e7a5736d610c\"}"}
+{"level":30,"time":"2025-10-24T19:05:15.314Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:15.314Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:15.722Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:15.730Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:15.730Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:15.842Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:15.847Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:15.847Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:15.866Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:15.872Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:15.872Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:15.887Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:15.892Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:15.892Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:16.091Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:18.104Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:18.104Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-4.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:18.265Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:18.272Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:18.291Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=55b086cf-2a72-40b2-8d6d-d2c6f477470d from context=3008291e-99a5-466d-8486-ecc9b41546ca page stack"}
+{"level":30,"time":"2025-10-24T19:05:18.532Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -61,12 +254,48 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.550Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.551Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.572Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.572Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.575Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.575Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:18.539Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:18.539Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:18.542Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:18.542Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:18.546Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:18.744Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:18.744Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:18.744Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:18.759Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:18.759Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:18.759Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e80f5b546526a5ac388b2d3f085fbb3f\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=d65966c0-7f71-49be-aae1-d25c9ef5e8d8\"}"}
+{"level":30,"time":"2025-10-24T19:05:18.759Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:18.771Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=eca5bdb1-8542-44de-a9d6-8c9de458fc10 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:18.772Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=eca5bdb1-8542-44de-a9d6-8c9de458fc10"}
+{"level":30,"time":"2025-10-24T19:05:18.772Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:18.778Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:18.778Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e80f5b546526a5ac388b2d3f085fbb3f\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=eca5bdb1-8542-44de-a9d6-8c9de458fc10\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@a679810e30d37612ab2779e8d7ebb646\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=d65966c0-7f71-49be-aae1-d25c9ef5e8d8\"}"}
+{"level":30,"time":"2025-10-24T19:05:18.907Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:18.907Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:19.368Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:19.375Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:19.375Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:19.466Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:19.471Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:19.471Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-btn in page."}
+{"level":30,"time":"2025-10-24T19:05:19.646Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:19.655Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:19.655Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2025-10-24T19:05:19.697Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element id=email is editable: true"}
+{"level":30,"time":"2025-10-24T19:05:19.697Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:19.746Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:19.753Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:19.753Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-10-24T19:05:19.780Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element id=password is editable: true"}
+{"level":30,"time":"2025-10-24T19:05:19.780Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:19.797Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:19.806Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:19.806Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-5.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:20.068Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:20.075Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:20.096Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=eedcf960-8fa9-49a0-9218-7ea8d7c31e62 from context=eca5bdb1-8542-44de-a9d6-8c9de458fc10 page stack"}
+{"level":30,"time":"2025-10-24T19:05:20.367Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -80,10 +309,46 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.592Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.592Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.594Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.595Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:20.375Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:20.375Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:20.378Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:20.378Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:20.382Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:20.583Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:20.583Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:20.583Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:20.594Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:20.594Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:20.594Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7ad7df682637dd7fd2255cd8d13544c1\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=f65002d0-18ec-4326-9ff2-69f1c78642e8\"}"}
+{"level":30,"time":"2025-10-24T19:05:20.594Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:20.605Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=a185aa09-535f-4fc9-9247-0b91fbde9104 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:20.605Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=a185aa09-535f-4fc9-9247-0b91fbde9104"}
+{"level":30,"time":"2025-10-24T19:05:20.606Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:20.613Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:20.613Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7ad7df682637dd7fd2255cd8d13544c1\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=a185aa09-535f-4fc9-9247-0b91fbde9104\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@47752e0494fd1e9ad59f2ff0cecc4138\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=f65002d0-18ec-4326-9ff2-69f1c78642e8\"}"}
+{"level":30,"time":"2025-10-24T19:05:20.741Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:20.741Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:21.221Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:21.227Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:21.228Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:21.342Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:21.351Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:21.351Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#root > main > div > div > div.login-footer > p > a in page."}
+{"level":30,"time":"2025-10-24T19:05:21.535Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:21.542Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:21.542Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.register-form in page."}
+{"level":30,"time":"2025-10-24T19:05:21.550Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:21.564Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:21.564Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.register-form in page."}
+{"level":30,"time":"2025-10-24T19:05:21.598Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Element css=.register-form is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('.register-form')\u001b[22m\n"}
+{"level":30,"time":"2025-10-24T19:05:21.598Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Checking checked state"}
+{"level":30,"time":"2025-10-24T19:05:21.650Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-10-24T19:05:21.661Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:21.661Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-6.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:21.942Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:21.952Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:21.972Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=8f2f54c6-bf2d-4899-b963-d764d9b0999a from context=a185aa09-535f-4fc9-9247-0b91fbde9104 page stack"}
+{"level":30,"time":"2025-10-24T19:05:22.162Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -97,10 +362,44 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.615Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.615Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.619Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.619Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:22.167Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:22.167Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:22.171Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:22.171Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:22.174Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:22.376Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:22.376Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:22.376Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:22.387Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:22.388Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:22.388Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@6abc2af762bb16b6584daccaf8b57855\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=b14c8873-93a9-4d55-a1c8-c7b048e14d69\"}"}
+{"level":30,"time":"2025-10-24T19:05:22.388Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:22.398Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=cd6bd223-ff9f-4c73-b716-7552cf1c88d1 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:22.398Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=cd6bd223-ff9f-4c73-b716-7552cf1c88d1"}
+{"level":30,"time":"2025-10-24T19:05:22.398Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:22.408Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:22.408Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@6abc2af762bb16b6584daccaf8b57855\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=cd6bd223-ff9f-4c73-b716-7552cf1c88d1\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@6e87192a8b091142673d7a7f68a38256\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=b14c8873-93a9-4d55-a1c8-c7b048e14d69\"}"}
+{"level":30,"time":"2025-10-24T19:05:22.541Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:22.541Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:22.988Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:22.993Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:22.993Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:23.112Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:23.120Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:23.121Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:23.159Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:23.166Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:23.166Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:23.180Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:23.186Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:23.186Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:23.323Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:25.365Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:25.366Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-7.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:25.662Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:25.674Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:25.705Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=1396bc95-33ed-41b1-8708-34fbd1db9f81 from context=cd6bd223-ff9f-4c73-b716-7552cf1c88d1 page stack"}
+{"level":30,"time":"2025-10-24T19:05:25.899Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -114,10 +413,65 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.651Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.651Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.657Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.657Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:25.904Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:25.904Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:25.906Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:25.906Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:25.910Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:26.096Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-10-24T19:05:26.096Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-10-24T19:05:26.096Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-10-24T19:05:26.107Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:26.108Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}}"}
+{"level":30,"time":"2025-10-24T19:05:26.108Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2fa885d54b595cfb42250240e5cad61a\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=3e6a049a-b147-48ae-b436-5fa4c2efb5dd\"}"}
+{"level":30,"time":"2025-10-24T19:05:26.108Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Trace file: "}
+{"level":30,"time":"2025-10-24T19:05:26.120Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Setting default timeout for context context=6af3f397-d98e-4158-910c-bd5dd9818836 to 10000"}
+{"level":30,"time":"2025-10-24T19:05:26.120Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active context: context=6af3f397-d98e-4158-910c-bd5dd9818836"}
+{"level":30,"time":"2025-10-24T19:05:26.120Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newContext"}
+{"level":30,"time":"2025-10-24T19:05:26.129Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:26.130Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2fa885d54b595cfb42250240e5cad61a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=6af3f397-d98e-4158-910c-bd5dd9818836\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@801824101c3a60d68989a95f02d6dfbc\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":1080,\"width\":1920}},\"traceFile\":\"\"}],\"id\":\"browser=3e6a049a-b147-48ae-b436-5fa4c2efb5dd\"}"}
+{"level":30,"time":"2025-10-24T19:05:26.280Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-10-24T19:05:26.280Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Changed active page"}
+{"level":30,"time":"2025-10-24T19:05:26.735Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-10-24T19:05:26.739Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:26.739Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=.login-form in page."}
+{"level":30,"time":"2025-10-24T19:05:26.827Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:26.834Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:26.834Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:26.861Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:26.866Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:26.866Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:26.878Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:26.882Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:26.882Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:27.027Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:29.036Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:29.036Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:29.054Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:29.061Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:29.061Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:29.076Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:29.079Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:29.079Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:29.110Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:31.119Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:31.119Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#email in page."}
+{"level":30,"time":"2025-10-24T19:05:31.141Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:31.149Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:31.150Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#password in page."}
+{"level":30,"time":"2025-10-24T19:05:31.168Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method fillText"}
+{"level":30,"time":"2025-10-24T19:05:31.173Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method click"}
+{"level":30,"time":"2025-10-24T19:05:31.173Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=main > div > div > form > button in page."}
+{"level":30,"time":"2025-10-24T19:05:31.209Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method click"}
+{"level":30,"time":"2025-10-24T19:05:33.220Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Strict mode is enabled, find Locator with css=#root > header > div > nav > ul > li:nth-child(4) > a in page."}
+{"level":30,"time":"2025-10-24T19:05:33.220Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:33.224Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-10-24T19:05:33.231Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:33.231Z","pid":30752,"hostname":"Raphael-L2R2FIL","Take screenshot with options: ":{"path":"C:\\Users\\raphael\\Documents\\GitHub\\learn\\Compass\\cinema\\test-ciname-challenge\\results\\browser\\screenshot\\robotframework-browser-screenshot-8.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-10-24T19:05:33.328Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-10-24T19:05:33.332Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-10-24T19:05:33.346Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Removed page=7f2f72d8-3bc7-489f-9916-9d9c4fce2085 from context=6af3f397-d98e-4158-910c-bd5dd9818836 page stack"}
+{"level":30,"time":"2025-10-24T19:05:33.555Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -131,8 +485,8 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.678Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.678Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:33.560Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:33.561Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -146,7 +500,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-24T18:06:55.688Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.688Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-24T18:06:55.724Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-10-24T18:06:55.724Z","pid":29032,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-24T19:05:33.566Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:33.566Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-24T19:05:33.613Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-24T19:05:33.614Z","pid":30752,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}

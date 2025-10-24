@@ -12,9 +12,6 @@ Library    Faker
 Library    JSONLibrary
 
 *** Keywords ***
-# =========================
-# Navegação e Verificações
-# =========================
 
 Open Page
     [Arguments]    ${root}=/
@@ -45,9 +42,6 @@ Verify Text In Element
     ...    msg=Texto não corresponde no elemento '${selector}'\nEsperado: '${expected_text}'\nEncontrado: '${actual_text}'
 
 
-# =========================
-# Fixtures
-# =========================
 
 Load JSON Fixture
     [Documentation]    Carrega um fixture JSON do arquivo
@@ -88,10 +82,6 @@ Get Auth Fixture
     RETURN    ${fixture}
 
 
-# =========================
-# Dados Dinâmicos
-# =========================
-
 Generate Update Profile Fixture
     [Documentation]    Gera dados aleatórios para atualização de perfil
     ${timestamp}=    Get Time    epoch
@@ -111,3 +101,21 @@ Generate Update Profile Fixture
     ...    email=${random_email}
     ...    password=${random_password}
     RETURN    ${user_data}
+
+Suite Setup
+    [Documentation]    Configuração inicial da suite de testes
+    New Browser    ${BROWSER}    headless=${HEADLESS}
+    New Context    viewport={'width': 1920, 'height': 1080}
+
+Suite Teardown
+    [Documentation]    Finalização da suite de testes
+    Close Browser
+
+Test Setup
+    [Documentation]    Configuração inicial de cada teste
+    New Page    about:blank
+
+Test Teardown
+    [Documentation]    Finalização de cada teste
+    Run Keyword If Test Failed    Take Screenshot    fullPage=True
+    Close Page
