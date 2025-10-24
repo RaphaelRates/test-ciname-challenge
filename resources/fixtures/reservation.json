@@ -1,0 +1,24 @@
+{
+  "single_seat": {
+    "seats": [
+      {"row": "A", "number": 1, "type": "full"}
+    ],
+    "paymentMethod": "credit_card"
+  },
+  "multiple_seats": {
+    "seats": [
+      {"row": "B", "number": 1, "type": "full"},
+      {"row": "B", "number": 2, "type": "half"}
+    ],
+    "paymentMethod": "debit_card"
+  },
+  "family_seats": {
+    "seats": [
+      {"row": "C", "number": 1, "type": "full"},
+      {"row": "C", "number": 2, "type": "full"},
+      {"row": "C", "number": 3, "type": "half"},
+      {"row": "C", "number": 4, "type": "half"}
+    ],
+    "paymentMethod": "pix"
+  }
+}

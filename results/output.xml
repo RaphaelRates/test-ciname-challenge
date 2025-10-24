@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2025-10-24T15:06:54.223283" rpa="false" schemaversion="5">
+<suite id="s1" name="Server" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server">
+<suite id="s1-s1" name="Auth" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth">
+<suite id="s1-s1-s1" name="Login" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth\login.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2025-10-24T15:06:54.875992" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>cinema_api</arg>
+<arg>${URL_API}</arg>
+<arg>headers=${DEFAULT_HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Test Register New User" line="16">
+<kw name="Create API Session" owner="auth">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:54.875992" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${alias}</arg>
+<arg>${URL_API}</arg>
+<arg>headers=${DEFAULT_HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+</kw>
+<kw name="Register User" owner="auth">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-24T15:06:54.875992" level="INFO">${payload} = {'name': 'John Doe', 'email': 'john@example.com', 'password': 'MyPassword123'}</msg>
+<var>${payload}</var>
+<arg>name=${name}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-24T15:06:54.875992" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:54.958356" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/register 
+ path_url=/api/v1/auth/register 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '78'} 
+ body=b'{"name": "John Doe", "email": "john@example.com", "password": "MyPassword123"}' 
+ </msg>
+<msg time="2025-10-24T15:06:54.958356" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/register 
+ status=400, reason=Bad Request 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '49', 'ETag': 'W/"31-WKEMg8zALB1Ko0WjUHi/6RBGHVc"', 'Date': 'Fri, 24 Oct 2025 18:06:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"success":false,"message":"User already exists"} 
+ </msg>
+<msg time="2025-10-24T15:06:54.958356" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</msg>
+<var>${resp}</var>
+<arg>api</arg>
+<arg>/auth/register</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.083357">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${resp}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${body['success'] is True}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:54.960358" elapsed="0.000000"/>
+</return>
+<var>${body}</var>
+<arg>John Doe</arg>
+<arg>john@example.com</arg>
+<arg>MyPassword123</arg>
+<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.084366">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[REGISTER SUCCESS ✅]\n${body}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:54.961445" elapsed="0.000000"/>
+</kw>
+<msg time="2025-10-24T15:06:54.986892" level="INFO">Starting Browser process C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59746</msg>
+<status status="FAIL" start="2025-10-24T15:06:54.875992" elapsed="0.085453">HTTPError: 400 Client Error: Bad Request for url: http://localhost:3000/api/v1/auth/register</status>
+</test>
+<test id="s1-s1-s1-t2" name="Test Login Existing User" line="21">
+<kw name="Create API Session" owner="auth">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.521784" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${alias}</arg>
+<arg>${URL_API}</arg>
+<arg>headers=${DEFAULT_HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<kw name="Login User" owner="auth">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.521784" level="INFO">${payload} = {'email': 'john@example.com', 'password': 'MyPassword123'}</msg>
+<var>${payload}</var>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.521784" level="FAIL">Non-existing index or alias 'http://localhost:3000/api/v1'.</msg>
+<var>${resp}</var>
+<arg>${URL_API}</arg>
+<arg>/auth/login</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.521784" elapsed="0.000000">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${resp}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</return>
+<var>${body}</var>
+<arg>john@example.com</arg>
+<arg>MyPassword123</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.521784" elapsed="0.000000">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[LOGIN SUCCESS ✅]\n${body}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.521784" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-24T15:06:55.514937" elapsed="0.006847">Non-existing index or alias 'http://localhost:3000/api/v1'.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Test Login Invalid Credentials" line="26">
+<kw name="Create API Session" owner="auth">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.536087" level="INFO">Creating Session using : alias=api, url=http://localhost:3000/api/v1, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${alias}</arg>
+<arg>${URL_API}</arg>
+<arg>headers=${DEFAULT_HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-24T15:06:55.535449" elapsed="0.000638"/>
+</kw>
+<status status="PASS" start="2025-10-24T15:06:55.534377" elapsed="0.001710"/>
+</kw>
+<kw name="Login User" owner="auth">
+<msg time="2025-10-24T15:06:55.539143" level="FAIL">Variable '${expected_status}' not found.</msg>
+<var>${resp}</var>
+<arg>john@example.com</arg>
+<arg>WrongPass</arg>
+<arg>${expected_status}=400</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.536087" elapsed="0.003056">Variable '${expected_status}' not found.</status>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.540142" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be False">
+<arg>${body['success'] is True}</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.540142" elapsed="0.000716"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[LOGIN FAILED ❌]\n${body}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.540858" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-24T15:06:55.531009" elapsed="0.009849">Variable '${expected_status}' not found.</status>
+</test>
+<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
+<msg time="2025-10-24T15:06:55.543853" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2025-10-24T15:06:55.543853" elapsed="0.000000"/>
+</kw>
+<doc>Testes de login de usuário</doc>
+<status status="FAIL" start="2025-10-24T15:06:54.250907" elapsed="1.292946"/>
+</suite>
+<suite id="s1-s1-s2" name="Register" source="C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\tests\server\auth\register.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2025-10-24T15:06:55.575473" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>cinema_api</arg>
+<arg>http://localhost:3000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-24T15:06:55.574466" elapsed="0.001007"/>
+</kw>
+<test id="s1-s1-s2-t1" name="Teste Registro Usuario Valido Com Fixture" line="15">
+<kw name="Register User With Fixture" owner="auth">
+<kw name="Get Auth Fixture" owner="base">
+<kw name="Load JSON Fixture" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.579561" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
+<var>${file_path}</var>
+<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.000000"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-10-24T15:06:55.579561" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
+<msg time="2025-10-24T15:06:55.580561" level="INFO">${json_data} = {
+  "valid_user": {
+    "name": "John2 Doe",
+    "email": "john2.doe@example.com",
+    "password": "SecurePass123!"
+  },
+  "invalid_user_email": {
+    "name": "Invalid User",
+    "email": "not-an-emai...</msg>
+<var>${json_data}</var>
+<arg>${file_path}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.580561" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
+<var>${all_fixtures}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${fixture_name}' != 'None'">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-24T15:06:55.581555" level="INFO">${fixture} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
+<var>${fixture}</var>
+<arg>${all_fixtures}</arg>
+<arg>${fixture_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000994"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${all_fixtures}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2025-10-24T15:06:55.581555" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-10-24T15:06:55.580561" elapsed="0.000994"/>
+</if>
+<msg time="2025-10-24T15:06:55.581555" level="INFO">${fixture} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
+<var>${fixture}</var>
+<arg>auth.json</arg>
+<arg>${fixture_name}</arg>
+<doc>Carrega um fixture JSON do arquivo</doc>
+<status status="PASS" start="2025-10-24T15:06:55.579561" elapsed="0.003000"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.582561" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-24T15:06:55.582561" level="INFO">${user_data} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
+<var>${user_data}</var>
+<arg>${fixture_name}</arg>
+<status status="PASS" start="2025-10-24T15:06:55.578565" elapsed="0.003996"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${user_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.582561" elapsed="0.000000"/>
+</kw>
+<kw name="Register User" owner="auth">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.586562" level="INFO">${payload} = {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}</msg>
+<var>${payload}</var>
+<arg>name=${name}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.586562" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.587560" level="FAIL">Non-existing index or alias 'api'.</msg>
+<var>${resp}</var>
+<arg>api</arg>
+<arg>/auth/register</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.586562" elapsed="0.000998">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${resp}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${body['success'] is True}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.587560" elapsed="0.000999"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<arg>${user_data['name']}</arg>
+<arg>${user_data['email']}</arg>
+<arg>${user_data['password']}</arg>
+<arg>${expected_status}</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.583563" elapsed="0.004996">Non-existing index or alias 'api'.</status>
+</kw>
+<return>
+<value>${response}</value>
+<value>${user_data}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<var>${user_data}</var>
+<arg>valid_user</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.578565" elapsed="0.009994">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[REGISTER USER RESPONSE]\n${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.588559" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Response Success">
+<arg>${response}</arg>
+<arg>201</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
+</kw>
+<kw name="Extract User From Response">
+<var>${user}</var>
+<arg>${response}</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
+</kw>
+<kw name="Verify User Data Structure">
+<arg>${user}</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${user}[name]</arg>
+<arg>${user_data}[name]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${user}[email]</arg>
+<arg>${user_data}[email]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.589552" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>token</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.590563" elapsed="0.000000"/>
+</kw>
+<doc>Testa registro de usuário com fixture válida</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.575473" elapsed="0.015090">Non-existing index or alias 'api'.</status>
+</test>
+<test id="s1-s1-s2-t2" name="Teste Registro Usuario Randomico" line="28">
+<kw name="Register Random User" owner="auth">
+<kw name=" Generate User with Faker" owner="base">
+<kw name="Faker Name">
+<msg time="2025-10-24T15:06:55.600553" level="FAIL">No keyword with name 'Faker Name' found.</msg>
+<var>${random_name}</var>
+<status status="FAIL" start="2025-10-24T15:06:55.600553" elapsed="0.000000">No keyword with name 'Faker Name' found.</status>
+</kw>
+<kw name="Faker Email">
+<var>${random_email}</var>
+<status status="NOT RUN" start="2025-10-24T15:06:55.600553" elapsed="0.000000"/>
+</kw>
+<kw name="Faker Password">
+<var>${random_password}</var>
+<arg>length=12</arg>
+<arg>special_chars=True</arg>
+<arg>digits=True</arg>
+<arg>upper_case=True</arg>
+<arg>lower_case=True</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>&amp;{user_data}</var>
+<arg>name=${random_name}</arg>
+<arg>email=${random_email}</arg>
+<arg>password=${random_password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${user_data}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.601559" elapsed="0.000000"/>
+</return>
+<var>${user_data}</var>
+<doc>Gera dados aleatórios para registro de usuário</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.598554" elapsed="0.004006">No keyword with name 'Faker Name' found.</status>
+</kw>
+<kw name="Register User" owner="auth">
+<var>${response}</var>
+<arg>${user_data['name']}</arg>
+<arg>${user_data['email']}</arg>
+<arg>${user_data['password']}</arg>
+<arg>201</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.602560" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${response}</value>
+<value>${user_data}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.602560" elapsed="0.000996"/>
+</return>
+<var>${response}</var>
+<var>${user_data}</var>
+<doc>Registra um usuário com dados únicos gerados dinamicamente</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.597554" elapsed="0.006002">No keyword with name 'Faker Name' found.</status>
+</kw>
+<kw name="Verify Response Success">
+<arg>${response}</arg>
+<arg>201</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.604555" elapsed="0.000000"/>
+</kw>
+<kw name="Extract User From Response">
+<var>${user}</var>
+<arg>${response}</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.608446" elapsed="0.000000"/>
+</kw>
+<kw name="Verify User Data Structure">
+<arg>${user}</arg>
+<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${user}[name]</arg>
+<arg>${user_data}[name]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${user}[email]</arg>
+<arg>${user_data}[email]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.609528" elapsed="0.000000"/>
+</kw>
+<doc>Testa registro de usuário com dados aleatórios</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.595554" elapsed="0.014973">No keyword with name 'Faker Name' found.</status>
+</test>
+<test id="s1-s1-s2-t3" name="Teste Registro Email Invalido Com Fixture" line="38">
+<kw name="Register User With Fixture" owner="auth">
+<kw name="Get Auth Fixture" owner="base">
+<kw name="Load JSON Fixture" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.628097" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
+<var>${file_path}</var>
+<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.626087" elapsed="0.002010"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-10-24T15:06:55.628097" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
+<msg time="2025-10-24T15:06:55.628097" level="INFO">${json_data} = {
+  "valid_user": {
+    "name": "John2 Doe",
+    "email": "john2.doe@example.com",
+    "password": "SecurePass123!"
+  },
+  "invalid_user_email": {
+    "name": "Invalid User",
+    "email": "not-an-emai...</msg>
+<var>${json_data}</var>
+<arg>${file_path}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.628097" elapsed="0.002012"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.630109" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
+<var>${all_fixtures}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${fixture_name}' != 'None'">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-24T15:06:55.632117" level="INFO">${fixture} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
+<var>${fixture}</var>
+<arg>${all_fixtures}</arg>
+<arg>${fixture_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${all_fixtures}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-10-24T15:06:55.630109" elapsed="0.002008"/>
+</if>
+<msg time="2025-10-24T15:06:55.632117" level="INFO">${fixture} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
+<var>${fixture}</var>
+<arg>auth.json</arg>
+<arg>${fixture_name}</arg>
+<doc>Carrega um fixture JSON do arquivo</doc>
+<status status="PASS" start="2025-10-24T15:06:55.626087" elapsed="0.006030"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-24T15:06:55.632117" level="INFO">${user_data} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
+<var>${user_data}</var>
+<arg>${fixture_name}</arg>
+<status status="PASS" start="2025-10-24T15:06:55.623526" elapsed="0.008591"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${user_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.632117" elapsed="0.000000"/>
+</kw>
+<kw name="Register User" owner="auth">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.638091" level="INFO">${payload} = {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!'}</msg>
+<var>${payload}</var>
+<arg>name=${name}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.638091" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.639092" level="FAIL">Non-existing index or alias 'api'.</msg>
+<var>${resp}</var>
+<arg>api</arg>
+<arg>/auth/register</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.639092" elapsed="0.001000">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${resp}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.640092" elapsed="0.001003"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${body['success'] is True}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.641095" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<arg>${user_data['name']}</arg>
+<arg>${user_data['email']}</arg>
+<arg>${user_data['password']}</arg>
+<arg>${expected_status}</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.634084" elapsed="0.009197">Non-existing index or alias 'api'.</status>
+</kw>
+<return>
+<value>${response}</value>
+<value>${user_data}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<var>${user_data}</var>
+<arg>invalid_user_email</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.623526" elapsed="0.019755">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.json()}[success]</arg>
+<arg>${False}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.643281" elapsed="0.000000"/>
+</kw>
+<doc>Testa registro com email inválido usando fixture</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.619529" elapsed="0.023752">Non-existing index or alias 'api'.</status>
+</test>
+<test id="s1-s1-s2-t4" name="Teste Registro Senha Curta Com Fixture" line="44">
+<kw name="Register User With Fixture" owner="auth">
+<kw name="Get Auth Fixture" owner="base">
+<kw name="Load JSON Fixture" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${file_path} = C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json</msg>
+<var>${file_path}</var>
+<arg>${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-10-24T15:06:55.661061" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json"&gt;C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\fixtures\auth.json&lt;/a&gt;'.</msg>
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${json_data} = {
+  "valid_user": {
+    "name": "John2 Doe",
+    "email": "john2.doe@example.com",
+    "password": "SecurePass123!"
+  },
+  "invalid_user_email": {
+    "name": "Invalid User",
+    "email": "not-an-emai...</msg>
+<var>${json_data}</var>
+<arg>${file_path}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${all_fixtures} = {'valid_user': {'name': 'John2 Doe', 'email': 'john2.doe@example.com', 'password': 'SecurePass123!'}, 'invalid_user_email': {'name': 'Invalid User', 'email': 'not-an-email', 'password': 'ValidPass123!...</msg>
+<var>${all_fixtures}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${fixture_name}' != 'None'">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${fixture} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
+<var>${fixture}</var>
+<arg>${all_fixtures}</arg>
+<arg>${fixture_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${all_fixtures}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</if>
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${fixture} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
+<var>${fixture}</var>
+<arg>auth.json</arg>
+<arg>${fixture_name}</arg>
+<doc>Carrega um fixture JSON do arquivo</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${fixture}</value>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-24T15:06:55.661061" level="INFO">${user_data} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
+<var>${user_data}</var>
+<arg>${fixture_name}</arg>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${user_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.661061" elapsed="0.000000"/>
+</kw>
+<kw name="Register User" owner="auth">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-24T15:06:55.669547" level="INFO">${payload} = {'name': 'Short Pass', 'email': 'short@example.com', 'password': '123'}</msg>
+<var>${payload}</var>
+<arg>name=${name}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-24T15:06:55.669547" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-24T15:06:55.670565" level="FAIL">Non-existing index or alias 'api'.</msg>
+<var>${resp}</var>
+<arg>api</arg>
+<arg>/auth/register</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.669547" elapsed="0.001018">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${resp}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${body}</var>
+<arg>${resp.json()}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${body['success'] is True}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.670565" elapsed="0.000941"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.671506" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<arg>${user_data['name']}</arg>
+<arg>${user_data['email']}</arg>
+<arg>${user_data['password']}</arg>
+<arg>${expected_status}</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.661061" elapsed="0.010445">Non-existing index or alias 'api'.</status>
+</kw>
+<return>
+<value>${response}</value>
+<value>${user_data}</value>
+<status status="NOT RUN" start="2025-10-24T15:06:55.671506" elapsed="0.000000"/>
+</return>
+<var>${response}</var>
+<var>${user_data}</var>
+<arg>invalid_user_password</arg>
+<status status="FAIL" start="2025-10-24T15:06:55.660515" elapsed="0.010991">Non-existing index or alias 'api'.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.672505" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.json()}[success]</arg>
+<arg>${False}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-10-24T15:06:55.672505" elapsed="0.000000"/>
+</kw>
+<doc>Testa registro com senha curta usando fixture</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.656145" elapsed="0.016360">Non-existing index or alias 'api'.</status>
+</test>
+<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
+<msg time="2025-10-24T15:06:55.683661" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2025-10-24T15:06:55.683661" elapsed="0.000000"/>
+</kw>
+<doc>Testes de registro de usuário</doc>
+<status status="FAIL" start="2025-10-24T15:06:55.553344" elapsed="0.130317"/>
+</suite>
+<status status="FAIL" start="2025-10-24T15:06:54.244126" elapsed="1.447305"/>
+</suite>
+<status status="FAIL" start="2025-10-24T15:06:54.223283" elapsed="1.468148"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Server" id="s1" pass="0" fail="7" skip="0">Server</stat>
+<stat name="Auth" id="s1-s1" pass="0" fail="7" skip="0">Server.Auth</stat>
+<stat name="Login" id="s1-s1-s1" pass="0" fail="3" skip="0">Server.Auth.Login</stat>
+<stat name="Register" id="s1-s1-s2" pass="0" fail="4" skip="0">Server.Auth.Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 30: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 36: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-24T15:06:54.525882" level="WARN">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\api\auth.resource' on line 44: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-24T15:06:54.806551" level="ERROR">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\base.resource' on line 11: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\raphael\anaconda3\Scripts\robot.exe
+  C:\Users\raphael\anaconda3\python312.zip
+  C:\Users\raphael\anaconda3\DLLs
+  C:\Users\raphael\anaconda3\Lib
+  C:\Users\raphael\anaconda3
+  C:\Users\raphael\anaconda3\Lib\site-packages
+  C:\Users\raphael\anaconda3\Lib\site-packages\win32
+  C:\Users\raphael\anaconda3\Lib\site-packages\win32\lib
+  C:\Users\raphael\anaconda3\Lib\site-packages\Pythonwin</msg>
+<msg time="2025-10-24T15:06:55.568465" level="ERROR">Error in file 'C:\Users\raphael\Documents\GitHub\learn\Compass\cinema\test-ciname-challenge\resources\base.resource' on line 11: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\raphael\anaconda3\Scripts\robot.exe
+  C:\Users\raphael\anaconda3\python312.zip
+  C:\Users\raphael\anaconda3\DLLs
+  C:\Users\raphael\anaconda3\Lib
+  C:\Users\raphael\anaconda3
+  C:\Users\raphael\anaconda3\Lib\site-packages
+  C:\Users\raphael\anaconda3\Lib\site-packages\win32
+  C:\Users\raphael\anaconda3\Lib\site-packages\win32\lib
+  C:\Users\raphael\anaconda3\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

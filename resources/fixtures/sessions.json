@@ -1,0 +1,17 @@
+{
+  "evening_session": {
+    "datetime": "2024-12-25T18:30:00.000Z",
+    "fullPrice": 25.00,
+    "halfPrice": 12.50
+  },
+  "night_session": {
+    "datetime": "2024-12-25T21:00:00.000Z",
+    "fullPrice": 30.00,
+    "halfPrice": 15.00
+  },
+  "weekend_session": {
+    "datetime": "2024-12-28T16:00:00.000Z",
+    "fullPrice": 35.00,
+    "halfPrice": 17.50
+  }
+}

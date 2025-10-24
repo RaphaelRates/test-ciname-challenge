@@ -1,0 +1,213 @@
+{
+  "create": {
+    "user": {
+      "name": "Christopher Nolan",
+      "email": "nolan@warner.com",
+      "password": "pwd123"
+    },
+    "movie": {
+      "title": "Interstellar",
+      "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "director": "Christopher Nolan",
+      "genres": ["Adventure", "Drama", "Science Fiction"],
+      "duration": 169,
+      "classification": "PG-13",
+      "releaseDate": "2014-11-06T00:00:00.000Z"
+    },
+    "theater": {
+      "name": "IMAX Theater 1",
+      "capacity": 250,
+      "type": "IMAX"
+    },
+    "session": {
+      "datetime": "2024-12-25T18:30:00.000Z",
+      "fullPrice": 35.00,
+      "halfPrice": 17.50
+    }
+  },
+
+  "duplicate": {
+    "user": {
+      "name": "James Cameron",
+      "email": "cameron@lightstorm.com",
+      "password": "pwd123"
+    },
+    "movie": {
+      "title": "Avatar",
+      "synopsis": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "director": "James Cameron",
+      "genres": ["Action", "Adventure", "Fantasy"],
+      "duration": 162,
+      "classification": "PG-13",
+      "releaseDate": "2009-12-18T00:00:00.000Z"
+    },
+    "theater": {
+      "name": "3D Theater Prime",
+      "capacity": 180,
+      "type": "3D"
+    }
+  },
+
+  "validation_error": {
+    "user": {
+      "name": "Invalid User",
+      "email": "not-an-email",
+      "password": "123"
+    },
+    "movie": {
+      "title": "",
+      "synopsis": "Movie with missing title",
+      "director": "Test Director",
+      "genres": [],
+      "duration": -120,
+      "classification": "INVALID",
+      "releaseDate": "invalid-date"
+    },
+    "theater": {
+      "name": "Invalid Theater",
+      "capacity": 0,
+      "type": "invalid_type"
+    }
+  },
+
+  "update": {
+    "user": {
+      "name": "Peter Jackson",
+      "email": "jackson@wingnut.com",
+      "password": "pwd123"
+    },
+    "movie_update": {
+      "title": "The Lord of the Rings: The Fellowship of the Ring - Extended Edition",
+      "duration": 178,
+      "classification": "PG-13"
+    },
+    "theater_update": {
+      "capacity": 200,
+      "type": "VIP"
+    },
+    "session_update": {
+      "fullPrice": 40.00,
+      "halfPrice": 20.00
+    }
+  },
+
+  "delete": {
+    "user": {
+      "name": "Quentin Tarantino",
+      "email": "quentin@a-band-apart.com",
+      "password": "pwd123"
+    },
+    "movie": {
+      "title": "Pulp Fiction",
+      "synopsis": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "director": "Quentin Tarantino",
+      "genres": ["Crime", "Drama"],
+      "duration": 154,
+      "classification": "R",
+      "releaseDate": "1994-10-14T00:00:00.000Z"
+    },
+    "theater": {
+      "name": "Tarantino Theater",
+      "capacity": 120,
+      "type": "standard"
+    }
+  },
+
+  "reservation_flow": {
+    "user": {
+      "name": "John Wick",
+      "email": "wick@continental.com",
+      "password": "pwd123"
+    },
+    "movie": {
+      "title": "John Wick: Chapter 4",
+      "synopsis": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      "director": "Chad Stahelski",
+      "genres": ["Action", "Thriller", "Crime"],
+      "duration": 169,
+      "classification": "R",
+      "releaseDate": "2023-03-24T00:00:00.000Z"
+    },
+    "theater": {
+      "name": "Action Theater",
+      "capacity": 150,
+      "type": "standard"
+    },
+    "session": {
+      "datetime": "2024-12-20T21:00:00.000Z",
+      "fullPrice": 30.00,
+      "halfPrice": 15.00
+    },
+    "reservation": {
+      "seats": [
+        {"row": "B", "number": 5, "type": "full"},
+        {"row": "B", "number": 6, "type": "full"}
+      ],
+      "paymentMethod": "credit_card"
+    }
+  },
+
+  "admin_operations": {
+    "admin_user": {
+      "name": "Admin User",
+      "email": "admin@cinema.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    "theater_creation": {
+      "name": "Admin Created Theater",
+      "capacity": 300,
+      "type": "IMAX"
+    },
+    "session_creation": {
+      "datetime": "2024-12-31T23:59:00.000Z",
+      "fullPrice": 50.00,
+      "halfPrice": 25.00
+    }
+  },
+
+  "search_filter": {
+    "movies": [
+      {
+        "title": "The Dark Knight",
+        "synopsis": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "director": "Christopher Nolan",
+        "genres": ["Action", "Crime", "Drama"],
+        "duration": 152,
+        "classification": "PG-13",
+        "releaseDate": "2008-07-18T00:00:00.000Z"
+      },
+      {
+        "title": "Inception",
+        "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "director": "Christopher Nolan",
+        "genres": ["Action", "Adventure", "Science Fiction"],
+        "duration": 148,
+        "classification": "PG-13",
+        "releaseDate": "2010-07-16T00:00:00.000Z"
+      }
+    ]
+  },
+
+  "edge_cases": {
+    "user_long_names": {
+      "name": "Dr. Stephen Vincent Strange M.D. Ph.D. Master of the Mystic Arts",
+      "email": "strange@sanctum.com",
+      "password": "pwd123"
+    },
+    "movie_special_chars": {
+      "title": "Avengers: Endgame - The Final Battle (Part I & II)",
+      "synopsis": "The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios' grand conclusion to twenty-two films, \"Avengers: Endgame.\"",
+      "director": "Anthony Russo & Joe Russo",
+      "genres": ["Action", "Adventure", "Drama"],
+      "duration": 181,
+      "classification": "PG-13",
+      "releaseDate": "2019-04-26T00:00:00.000Z"
+    },
+    "theater_max_capacity": {
+      "name": "Mega Theater",
+      "capacity": 500,
+      "type": "IMAX"
+    }
+  }
+}

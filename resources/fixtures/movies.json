@@ -1,0 +1,29 @@
+{
+  "interstellar": {
+    "title": "Interstellar",
+    "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "director": "Christopher Nolan",
+    "genres": ["Adventure", "Drama", "Science Fiction"],
+    "duration": 169,
+    "classification": "PG-13",
+    "releaseDate": "2014-11-06T00:00:00.000Z"
+  },
+  "avatar": {
+    "title": "Avatar",
+    "synopsis": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "director": "James Cameron",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "duration": 162,
+    "classification": "PG-13",
+    "releaseDate": "2009-12-18T00:00:00.000Z"
+  },
+  "inception": {
+    "title": "Inception",
+    "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "director": "Christopher Nolan",
+    "genres": ["Action", "Adventure", "Science Fiction"],
+    "duration": 148,
+    "classification": "PG-13",
+    "releaseDate": "2010-07-16T00:00:00.000Z"
+  }
+}

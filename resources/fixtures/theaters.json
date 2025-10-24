@@ -1,0 +1,17 @@
+{
+  "standard_theater": {
+    "name": "Theater 1",
+    "capacity": 120,
+    "type": "standard"
+  },
+  "imax_theater": {
+    "name": "IMAX Experience",
+    "capacity": 250,
+    "type": "IMAX"
+  },
+  "vip_theater": {
+    "name": "VIP Lounge",
+    "capacity": 50,
+    "type": "VIP"
+  }
+}
