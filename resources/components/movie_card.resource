@@ -93,5 +93,5 @@ Verificar Múltiplos Cartões de Filme
 
 Navegar Para Detalhes do Primeiro Filme
     [Documentation]    Navega para os detalhes do primeiro filme do grid
-    Click              ${MOVIES_GRID} ${MOVIE_CARD}:nth-child(1) ${MOVIE_DETAILS_BUTTON}
-    Sleep    0.5
+    Wait For Elements State    css=#root > main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > a    visible    timeout=5s
+    Click    css=#root > main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > a

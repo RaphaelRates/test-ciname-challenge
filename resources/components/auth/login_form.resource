@@ -57,17 +57,11 @@ Clicar Link Registrar
     Click    css=#root > main > div > div > div.login-footer > p > a
     Wait For Elements State    css=.register-form    visible    timeout=10s
 
-Verificar Página Registro Carregou
-    Get Url    contains    /register
-    Get Element States    css=.register-form    contains    visible
-
 Gerar Email Aleatório
     ${random_string}=    Generate Random String    8    [LOWER]
     [Return]    ${random_string}@example.com
 
-Gerar Senha Aleatória
-    ${random_senha}=    Generate Random String    12    [LETTERS][NUMBERS]
-    [Return]    ${random_senha}
+
 
 Tirar Print
     Browser.Take Screenshot    

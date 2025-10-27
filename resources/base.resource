@@ -107,6 +107,16 @@ Suite Setup
     New Browser    ${BROWSER}    headless=${HEADLESS}
     New Context    viewport={'width': 1920, 'height': 1080}
 
+Setup Browser
+    New Browser    chromium    headless=False
+    New Context
+    New Page    ${URL_FRONT}/
+
+Teardown Browser
+    Close Page
+    Close Context
+    Close Browser
+
 Suite Teardown
     [Documentation]    Finalização da suite de testes
     Close Browser
@@ -119,3 +129,11 @@ Test Teardown
     [Documentation]    Finalização de cada teste
     Run Keyword If Test Failed    Take Screenshot    fullPage=True
     Close Page
+
+Gerar Senha Aleatória
+    ${random_senha}=    Generate Random String    12    [LETTERS][NUMBERS]
+    [Return]    ${random_senha}
+
+Verificar Página Registro Carregou
+    Get Url    contains    /register
+    Get Element States    css=.register-form    contains    visible

@@ -12,6 +12,19 @@ ${LOGIN_ENDPOINT}        ${AUTH_BASE_URL}/login
 ${ME_ENDPOINT}           ${AUTH_BASE_URL}/me
 ${PROFILE_ENDPOINT}      ${AUTH_BASE_URL}/profile
 
+#root=/register - section=Register Form
+
+${REGISTER_FORM}                    css=.register-form
+${REGISTER_HEADER}                  css=.register-container h1
+${REGISTER_SUBHEADER}               css=#root > main > div > div > p
+${NAME_INPUT}                       css=#name
+${EMAIL_INPUT}                      css=#email
+${PASSWORD_INPUT}                   css=#password
+${CONFIRM_PASSWORD_INPUT}           css=#confirmPassword
+${REGISTER_BUTTON}                  css=.btn-primary
+${LOGIN_LINK}                       css=#root > main > div > div > div > p > a
+${LOGOUT_BUTTON}                    css=#root > header > div > nav > ul > li:nth-child(5) > button
+
 
 # HEADERS
 

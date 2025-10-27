@@ -42,3 +42,4 @@ Login User
     Status Should Be    ${resp}    ${expected_status}
     ${body}=    Evaluate    ${resp.json()}
     [Return]    ${body}
+
