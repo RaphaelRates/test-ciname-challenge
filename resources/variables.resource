@@ -188,3 +188,4 @@ ${MOVIE_SESSION_BUY_BUTTON}         ${MOVIE_SESSION_CARD} > a.session-button
 
 ${EXPECTED_GENERO_ONE_TEXT}       Adventure
 ${EXPECTED_GENERO_TWO_TEXT}       Action
+

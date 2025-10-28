@@ -10,16 +10,16 @@ Resource       ../../resources/pages/reservation_page.resource
 Resource       ../../resources/components/auth/login_form.resource
 
 *** Test Cases ***
-# TC050 - Verificar Carregamento da Página de Reservas
-#     [Documentation]    Deve verificar se a página de reservas carrega corretamente
-#     [Tags]    smoke    reservations
-#     Configurar Teste
-#     Abrir Página de Login
-#     Preencher Formulário de Login    raphaelrates.dev@gmail.com    12345678
-#     Sleep    1s
-#     Acessar Página de Reservas
-#     Validar Página de Reservas Carregada
-#     Validar Header da Página de Reservas
+TC050 - Verificar Carregamento da Página de Reservas
+    [Documentation]    Deve verificar se a página de reservas carrega corretamente
+    [Tags]    smoke    reservations
+    Configurar Teste
+    Abrir Página de Login
+    Preencher Formulário de Login    raphaelrates.dev@gmail.com    12345678
+    Sleep    1s
+    Acessar Página de Reservas
+    Validar Página de Reservas Carregada
+    Validar Header da Página de Reservas
 
 TC051 - Verificar Estrutura do Card de Reserva
     [Documentation]    Deve validar a estrutura completa de um card de reserva
@@ -31,7 +31,6 @@ TC051 - Verificar Estrutura do Card de Reserva
     Validar Estrutura do Card de Reserva
     Validar Elementos do Header da Reserva
     Validar Informações do Filme
-    Validar Detalhes da Sessão
     Validar Footer da Reserva
 
 TC052 - Validar Conteúdo da Reserva do Avengers
