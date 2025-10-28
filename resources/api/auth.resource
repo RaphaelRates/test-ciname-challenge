@@ -1,57 +1,101 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
-
-Resource    ../../resources/variables.resource
-Resource    ../../resources/base.resource
-
-
+Resource   ../variables.resource
 
 *** Keywords ***
-Register New User
-    [Arguments]    ${name}    ${email}    ${password}
-    ${body}=    Create Dictionary    name=${name}    email=${email}    password=${password}
-    ${response}=    POST    ${URL_FRONT}/auth/register    json=${body}    expected_status=any
-    RETURN    ${response}
+Create API Session
+    [Documentation]    Cria a sessão de RequestsLibrary.
+    Create Session    cinema_api    ${URL_API}    verify=True
 
-Login User
-    [Arguments]    ${email}    ${password}
-    ${body}=    Create Dictionary    email=${email}    password=${password}
-    ${response}=    POST    ${URL_FRONT}/auth/login    json=${body}    expected_status=any
-    RETURN    ${response}
-
-Get User Profile
+Set Admin Token
     [Arguments]    ${token}
-    ${headers}=    Create Dictionary    Authorization=Bearer ${token}
-    ${response}=    GET    ${URL_FRONT}/auth/me    headers=${headers}    expected_status=any
-    RETURN    ${response}
+    Set Suite Variable    ${ADMIN_TOKEN}    ${token}
 
-Update User Profile
-    [Arguments]    ${token}    ${name}=${NONE}    ${current_password}=${NONE}    ${new_password}=${NONE}
-    ${body}=    Create Dictionary
-    Run Keyword If    '${name}' != '${NONE}'    Set To Dictionary    ${body}    name=${name}
-    Run Keyword If    '${current_password}' != '${NONE}'    Set To Dictionary    ${body}    currentPassword=${current_password}
-    Run Keyword If    '${new_password}' != '${NONE}'    Set To Dictionary    ${body}    newPassword=${new_password}
-    ${headers}=    Create Dictionary    Authorization=Bearer ${token}
-    ${response}=    PUT    ${URL_FRONT}/auth/profile    json=${body}    headers=${headers}    expected_status=any
-    RETURN    ${response}
+Set User Token
+    [Arguments]    ${token}
+    Set Suite Variable    ${USER_TOKEN}    ${token}
 
-Extract Token From Response
-    [Arguments]    ${response}
-    ${json}=    Set Variable    ${response.json()}
-    ${token}=    Get From Dictionary    ${json['data']}    token
-    RETURN    ${token}
+Perform Valid Login
+    [Arguments]    ${email}    ${password}
+    [Documentation]    Realiza login e retorna o token JWT.
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${body}=    Create Dictionary    email=${email}    password=${password}
+    ${response}=    POST On Session    cinema_api    /auth/login    json=${body}    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    200
+    Should Be Equal As Strings    ${response.json()}[success]    True
+    ${token}=    Set Variable    ${response.json()}[data][token]
+    [Return]    ${token}
 
-Verify Success Response
-    [Arguments]    ${response}    ${expected_status}=200
-    Should Be Equal As Numbers    ${response.status_code}    ${expected_status}
-    ${json}=    Set Variable    ${response.json()}
-    Dictionary Should Contain Key    ${json}    success
-    Should Be True    ${json['success']}
+# NOVA PALAVRA-CHAVE DE SETUP
+Register And Perform Login
+    [Arguments]    ${email}    ${password}    ${name}=New Test User    ${role}=user  # <-- ADICIONE O ARGUMENTO ${role}
+    [Documentation]    Registra um novo usuário e faz login imediatamente.
+    
+    # 1. Registro (Endpoint POST /auth/register)
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${body}=    Create Dictionary    email=${email}    password=${password}    name=${name}    role=${role} # <-- INCLUA ROLE NO BODY
+    ${response}=    POST On Session    cinema_api    /auth/register    json=${body}    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    201
+    
+    # 2. Login (Endpoint POST /auth/login)
+    ${token}=    Perform Valid Login    ${email}    ${password}
+    [Return]    ${token}
 
-Verify Error Response
-    [Arguments]    ${response}    ${expected_status}    ${expected_message}=${NONE}
-    Should Be Equal As Numbers    ${response.status_code}    ${expected_status}
-    ${json}=    Set Variable    ${response.json()}
-    Should Be True    not ${json['success']}
-    Run Keyword If    '${expected_message}' != '${NONE}'    Should Contain    ${json['message']}    ${expected_message}
+Setup Authentication Tokens
+    [Documentation]    Registra/loga novos usuários Admin e User para garantir tokens válidos.
+    
+    # GERA E-MAIL ÚNICO PARA O NOVO USUÁRIO ADMIN E COMUM
+    ${timestamp}=    Get Time    epoch
+    ${admin_email}=    Catenate    SEPARATOR=    robot_admin_${timestamp}@example.com
+    ${user_email}=    Catenate    SEPARATOR=    robot_user_${timestamp}@example.com
+
+    # 1. REGISTRA E LOGA NOVO ADMIN (SENHA: ADMIN123, ROLE: ADMIN)
+    # Role deve ser enviada como "admin" para o endpoint de registro, ou o back-end deve ter uma rota específica para isso.
+    # Assumindo que o Admin precisa de role="admin" no corpo, mas usando o registro que já funciona.
+    
+    # ATENÇÃO: Se o registro ADMIN não for por role=admin, isso precisa ser ajustado.
+    # Vamos criar o Admin usando as credenciais e torcer para o Back-end aceitar a role.
+    ${admin_token}=    Register And Perform Login    ${admin_email}    ${ADMIN_PASSWORD}    Robot Admin    admin
+    Set Suite Variable    ${ADMIN_TOKEN}    ${admin_token}
+    Log To Console    Admin Token obtido.
+
+    # 2. REGISTRA E LOGA NOVO USUÁRIO (USER_TOKEN)
+    ${user_token}=    Register And Perform Login    ${user_email}    ${NEW_USER_PASSWORD}    Robot User
+    Set Suite Variable    ${USER_TOKEN}    ${user_token}
+    Log To Console    User Token obtido.
+
+*** Keywords ***
+Verify User Profile Access
+    [Arguments]    ${token}    ${expected_email}
+    [Documentation]    Verifica se o acesso ao perfil retorna dados corretos
+    ${headers}=    Create Dictionary    
+    ...    Content-Type=application/json    
+    ...    Authorization=Bearer ${token}
+    
+    ${response}=    GET On Session    cinema_api    /auth/me    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    200
+    Should Be Equal As Strings    ${response.json()}[data][email]    ${expected_email}
+    [Return]    ${response}
+
+Attempt Login With Invalid Credentials
+    [Arguments]    ${email}    ${password}
+    [Documentation]    Tenta login e verifica que falha
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${body}=    Create Dictionary    email=${email}    password=${password}
+    ${response}=    POST On Session    cinema_api    /auth/login    json=${body}    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    400
+    Should Be Equal As Strings    ${response.json()}[success]    False
+    [Return]    ${response}
+
+Update User Name
+    [Arguments]    ${token}    ${new_name}
+    [Documentation]    Atualiza o nome do usuário
+    ${headers}=    Create Dictionary    
+    ...    Content-Type=application/json    
+    ...    Authorization=Bearer ${token}
+    
+    ${body}=    Create Dictionary    name=${new_name}
+    ${response}=    PUT On Session    cinema_api    /auth/profile    json=${body}    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    200
+    [Return]    ${response}

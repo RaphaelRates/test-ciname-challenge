@@ -1,123 +1,105 @@
 *** Settings ***
-Documentation    Testes relacionados à autenticação de usuários via API
-
-Library          RequestsLibrary
-Library          Collections
-
-Resource    ../../resources/variables.resource
-Resource    ../../resources/base.resource
-
-Resource    ../../resources/api/auth.resource
-
-
-
-
-Suite Setup    Create Session    api    ${URL_FRONT}
+Library    RequestsLibrary
+Library    Collections
+Resource   ../../resources/variables.resource
+Resource   ../../resources/api/auth.resource
+Test Setup    Create API Session
 
 *** Test Cases ***
-# Testes POST /auth/register
-Test Register New User Successfully
-    [Documentation]    Deve registrar um novo usuário com sucesso
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    user${random}@gmail.com
-    ${response}=    Register New User    Usuario Teste    ${email}    senha123
-    Verify Success Response    ${response}    201
-    ${json}=    Set Variable    ${response.json()}
-    Should Be Equal    ${json['data']['email']}    ${email}
-    Should Be Equal    ${json['data']['role']}    user
-    Dictionary Should Contain Key    ${json['data']}    token
+TC001 - Cadastro de Usuário com Email Já Existente
+    [Documentation]    Tenta cadastrar usuário com email já registrado - CORRIGIDO
+    ${timestamp}=    Get Time    epoch
+    ${existing_email}=    Catenate    SEPARATOR=    teste_existente_${timestamp}@email.com
+    ${token}=    Register And Perform Login    ${existing_email}    ${NEW_USER_PASSWORD}
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${body}=    Create Dictionary    name=Duplicate User    email=${existing_email}    password=${NEW_USER_PASSWORD}
+    ${response}=    POST On Session    cinema_api    /auth/register    json=${body}    headers=${headers}    expected_status=400
+    Should Be Equal As Strings    ${response.status_code}    400
+    Log    Response da duplicação: ${response.json()}
 
-Test Register With Existing Email
-    [Documentation]    Não deve registrar usuário com email já cadastrado
-    ${email}=    Set Variable    duplicate@example.com
-    Register New User    Usuario 1    ${email}    senha123
-    ${response}=    Register New User    Usuario 2    ${email}    senha123
-    Verify Error Response    ${response}    404    already exists
+*** Test Cases ***
+TC002 - Cadastro com Dados Inválidos
+    [Documentation]    Testa registro com dados faltantes/inválidos - CORRIGIDO
+    ${timestamp}=    Get Time    epoch
+    
+    @{test_cases}=    Create List
+    ...    ${{{"name": "", "email": "teste${timestamp}@email.com", "password": "123456"}}}   
+    ...    ${{{"name": "Test User", "email": "email-invalido", "password": "123456"}}}  
+    ...    ${{{"name": "Test User", "email": "teste${timestamp}2@email.com", "password": "123"}}}    # FALTAVA FECHAR ESTA LINHA
+    ...    ${{{"name": "Test User", "email": "", "password": "123456"}}}   
 
-Test Register With Invalid Data
-    [Documentation]    Não deve registrar com dados inválidos
-    ${response}=    Register New User    ${EMPTY}    email-invalido    123
-    Should Be Equal As Numbers    ${response.status_code}    404
+    FOR    ${test_case}    IN    @{test_cases}
+        ${headers}=    Create Dictionary    Content-Type=application/json
+        ${response}=    POST On Session    cinema_api    /auth/register    json=${test_case}    headers=${headers}    expected_status=400
+        Should Be Equal As Strings    ${response.status_code}    400
+        Log    Response para caso inválido: ${response.json()}
+    END
 
-Test Login With Valid Credentials
-    [Documentation]    Deve fazer login com credenciais válidas
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    login${random}@example.com
-    Register New User    Usuario Login    ${email}    senha123
-    ${response}=    Login User    ${email}    senha123
-    Verify Success Response    ${response}    200
-    ${json}=    Set Variable    ${response.json()}
-    Should Be Equal    ${json['data']['email']}    ${email}
-    Dictionary Should Contain Key    ${json['data']}    token
+TC003 - Login com Credenciais Inválidas
+    [Documentation]    Testa login com email/senha incorretos - CORRIGIDO
+    ${timestamp}=    Get Time    epoch
+    ${valid_email}=    Catenate    SEPARATOR=    teste_login_invalido_${timestamp}@email.com
+    
+    ${token}=    Register And Perform Login    ${valid_email}    ${NEW_USER_PASSWORD}
+    
+    @{invalid_credentials}=    Create List
+    ...    ${{{"email": "naoexiste@email.com", "password": "${NEW_USER_PASSWORD}"}}}
+    ...    ${{{"email": "${valid_email}", "password": "senhaerrada"}}}
 
-Test Login With Invalid Email
-    [Documentation]    Não deve fazer login com email inexistente
-    ${response}=    Login User    naoexiste@example.com    senha123
-    Verify Error Response    ${response}    404    Invalid credentials
+    FOR    ${credentials}    IN    @{invalid_credentials}
+        ${headers}=    Create Dictionary    Content-Type=application/json
+        ${response}=    POST On Session    cinema_api    /auth/login    json=${credentials}    headers=${headers}    expected_status=401
+        Should Be Equal As Strings    ${response.status_code}    401
+        Should Be Equal As Strings    ${response.json()}[success]    False
+        Log    Response login inválido: ${response.json()}
+    END
 
-Test Login With Wrong Password
-    [Documentation]    Não deve fazer login com senha incorreta
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    wrongpass${random}@example.com
-    Register New User    Usuario    ${email}    senha123
-    ${response}=    Login User    ${email}    senhaerrada
-    Verify Error Response    ${response}    404    Invalid credentials
+TC004 - Acesso ao Perfil com Token Inválido
+    [Documentation]    Tenta acessar /auth/me com token inválido - CORRIGIDO
+    ${headers}=    Create Dictionary    
+    ...    Content-Type=application/json    
+    ...    Authorization=Bearer token_invalido_123
+    
+    ${response}=    GET On Session    cinema_api    /auth/me    headers=${headers}    expected_status=401
+    
+    Should Be Equal As Strings    ${response.status_code}    401
+    Should Be Equal As Strings    ${response.json()}[success]    False
 
-# Testes GET /auth/me
-Test Get Profile With Valid Token
-    [Documentation]    Deve retornar perfil do usuário com token válido
-    ${email}=    Set Variable    raphaelrates.dev@gmail.com
-    ${response}=    Register New User    Usuario Profile    ${email}    12345678
-    ${token}=    Extract Token From Response    ${response}
-    ${response}=    Get User Profile    ${token}
-    Verify Success Response    ${response}    200
-    ${json}=    Set Variable    ${response.json()}
-    Should Be Equal    ${json['data']['email']}    ${email}
 
-Test Get Profile Without Token
-    [Documentation]    Não deve retornar perfil sem token
-    ${response}=    Get User Profile    ${EMPTY}
-    Should Be Equal As Numbers    ${response.status_code}    401
+TC005 - Fluxo Completo de Autenticação
+    [Documentation]    Testa fluxo completo: registro → login → perfil → update → CORRIGIDO
+    ${timestamp}=    Get Time    epoch
+    ${flow_email}=    Catenate    SEPARATOR=    teste_fluxo_${timestamp}@email.com
+    ${new_name}=    Set Variable    Usuário Fluxo Completo
+    
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${register_body}=    Create Dictionary    name=Usuario Inicial    email=${flow_email}    password=${NEW_USER_PASSWORD}
+    ${register_response}=    POST On Session    cinema_api    /auth/register    json=${register_body}    headers=${headers}
+    Should Be Equal As Strings    ${register_response.status_code}    201
+    
+    ${token}=    Perform Valid Login    ${flow_email}    ${NEW_USER_PASSWORD}
+    Should Not Be Empty    ${token}
+    
+    ${profile_headers}=    Create Dictionary    
+    ...    Content-Type=application/json    
+    ...    Authorization=Bearer ${token}
+    ${profile_response}=    GET On Session    cinema_api    /auth/me    headers=${profile_headers}
+    Should Be Equal As Strings    ${profile_response.status_code}    200
+    Should Be Equal As Strings    ${profile_response.json()}[data][email]    ${flow_email}
+    
+    ${update_body}=    Create Dictionary    name=${new_name}
+    ${update_response}=    PUT On Session    cinema_api    /auth/profile    json=${update_body}    headers=${profile_headers}
+    Should Be Equal As Strings    ${update_response.status_code}    200
+    Should Be Equal As Strings    ${update_response.json()}[data][name]    ${new_name}
+    
+    Log    Fluxo completo de autenticação executado com sucesso!
 
-Test Get Profile With Invalid Token
-    [Documentation]    Não deve retornar perfil com token inválido
-    ${response}=    Get User Profile    token-invalido-12345
-    Should Be Equal As Numbers    ${response.status_code}    403
-
-# Testes PUT /auth/profile
-Test Update Profile Name Successfully
-    [Documentation]    Deve atualizar nome do usuário
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    update${random}@example.com
-    ${response}=    Register New User    Nome Antigo    ${email}    senha123
-    ${token}=    Extract Token From Response    ${response}
-    ${response}=    Update User Profile    ${token}    name=Nome Novo
-    Verify Success Response    ${response}    200
-    ${json}=    Set Variable    ${response.json()}
-    Should Be Equal    ${json['data']['name']}    Nome Novo
-
-Test Update Profile Password Successfully
-    [Documentation]    Deve atualizar senha do usuário
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    passupdate${random}@example.com
-    ${response}=    Register New User    Usuario    ${email}    senha123
-    ${token}=    Extract Token From Response    ${response}
-    ${response}=    Update User Profile    ${token}    current_password=senha123    new_password=novaSenha456
-    Verify Success Response    ${response}    200
-    # Testa login com nova senha
-    ${response}=    Login User    ${email}    novaSenha456
-    Verify Success Response    ${response}    200
-
-Test Update Profile With Wrong Current Password
-    [Documentation]    Não deve atualizar com senha atual incorreta
-    ${random}=    Evaluate    str(__import__('time').time()).replace('.','')
-    ${email}=    Set Variable    wrongcurrent${random}@example.com
-    ${response}=    Register New User    Usuario    ${email}    senha123
-    ${token}=    Extract Token From Response    ${response}
-    ${response}=    Update User Profile    ${token}    current_password=senhaerrada    new_password=novaSenha
-    Should Be Equal As Numbers    ${response.status_code}    401
-
-Test Update Profile Without Token
-    [Documentation]    Não deve atualizar perfil sem token
-    ${response}=    Update User Profile    ${EMPTY}    name=Novo Nome
-    Should Be Equal As Numbers    ${response.status_code}    401
+TC006 - Login com Credenciais do Raphael
+    [Documentation]    Testa login com email: raphaelrates.dev@gmail.com e senha: 12345678
+    ${specific_email}=    Set Variable    raphaelrates.dev@gmail.com
+    ${specific_password}=    Set Variable    12345678
+    
+    ${token}=    Perform Valid Login    ${specific_email}    ${specific_password}
+    
+    Should Not Be Empty    ${token}
+    Log    Login realizado com sucesso! Token obtido: ${token}

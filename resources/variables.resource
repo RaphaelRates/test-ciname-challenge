@@ -6,11 +6,22 @@ Documentation     Arquivo responsável por divponibilizar varíaveis
 
 ${URL_FRONT}    http://localhost:3002
 ${URL_API}      http://localhost:3000/api/v1
+
 ${AUTH_BASE_URL}         ${URL_API}/auth
 ${REGISTER_ENDPOINT}     ${AUTH_BASE_URL}/register
 ${LOGIN_ENDPOINT}        ${AUTH_BASE_URL}/login
 ${ME_ENDPOINT}           ${AUTH_BASE_URL}/me
 ${PROFILE_ENDPOINT}      ${AUTH_BASE_URL}/profile
+
+${ADMIN_EMAIL}          admin@example.com
+${ADMIN_PASSWORD}       admin123      
+${USER_EMAIL}           test@example.com    
+${USER_PASSWORD}        password123     
+${NEW_USER_NAME}        Novo Usuario Teste
+${NEW_USER_PASSWORD}    senha456       
+
+${ADMIN_TOKEN}          ${EMPTY}
+${USER_TOKEN}           ${EMPTY}
 
 #root=/register - section=Register Form
 
