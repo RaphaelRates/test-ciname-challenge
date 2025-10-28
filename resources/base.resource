@@ -7,6 +7,7 @@ Library    Browser
 Library    Screenshot
 Library    OperatingSystem
 Library    Collections
+Library    RequestsLibrary
 Library    String
 Library    Faker
 Library    JSONLibrary
@@ -137,3 +138,75 @@ Gerar Senha Aleatória
 Verificar Página Registro Carregou
     Get Url    contains    /register
     Get Element States    css=.register-form    contains    visible
+
+
+*** Settings ***
+Library    RequestsLibrary
+Library    Collections
+Library    String
+Library    OperatingSystem
+
+*** Variables ***
+${BASE_URL}    http://localhost:3000/api/v1
+${ADMIN_EMAIL}    admin@cinema.com
+${ADMIN_PASSWORD}    12345678
+${USER_EMAIL}    raphaelrates.dev@gmail.com
+${USER_PASSWORD}    12345678
+
+*** Keywords ***
+Setup API Session
+    [Documentation]    Cria sessão da API
+    Create Session    cinema_api    ${BASE_URL}    verify=true
+
+Teardown API Session
+    [Documentation]    Encerra sessão da API
+    Delete All Sessions
+
+Get Current Timestamp
+    [Documentation]    Retorna timestamp atual para emails únicos
+    ${timestamp}=    Get Time    epoch
+    [Return]    ${timestamp}
+
+Generate Unique Email
+    [Documentation]    Gera email único baseado no timestamp
+    [Arguments]    ${prefix}=test
+    ${timestamp}=    Get Current Timestamp
+    ${email}=    Catenate    SEPARATOR=    ${prefix}    _    ${timestamp}    @cinema.com
+    [Return]    ${email}
+
+Get Auth Token
+    [Documentation]    Obtém token de autenticação
+    [Arguments]    ${email}    ${password}
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${body}=    Create Dictionary    email=${email}    password=${password}
+    ${response}=    POST On Session    cinema_api    /auth/login    json=${body}    headers=${headers}
+    Should Be Equal As Strings    ${response.status_code}    200
+    ${token}=    Set Variable    ${response.json()}[data][token]
+    [Return]    ${token}
+
+Get Admin Token
+    [Documentation]    Obtém token de administrador
+    ${token}=    Get Auth Token    ${ADMIN_EMAIL}    ${ADMIN_PASSWORD}
+    [Return]    ${token}
+
+Get User Token
+    [Documentation]    Obtém token de usuário comum
+    ${token}=    Get Auth Token    ${USER_EMAIL}    ${USER_PASSWORD}
+    [Return]    ${token}
+
+Create Auth Headers
+    [Arguments]    ${token}
+    ${headers}=    Create Dictionary    
+    ...    Content-Type=application/json    
+    ...    Authorization=Bearer ${token}
+    [Return]    ${headers}
+
+Should Be Success Response
+    [Arguments]    ${response}    ${expected_status}=200
+    Should Be Equal As Strings    ${response.status_code}    ${expected_status}
+    Should Be Equal As Strings    ${response.json()}[success]    True
+
+Should Be Error Response Message
+    [Arguments]    ${response}    ${expected_message}
+    Should Be Equal As Strings    ${response.json()}[message]   ${expected_message}
+    Should Be Equal As Strings    ${response.json()}[success]    false

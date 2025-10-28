@@ -1,4 +1,4 @@
-{"level":30,"time":"2025-10-28T17:41:32.411Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:56587"}
+{"level":30,"time":"2025-10-28T20:27:44.386Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:57534"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -12,10 +12,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:32.886Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.886Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.889Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.890Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.725Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.725Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.729Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.729Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -29,10 +29,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:32.910Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.910Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.917Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.917Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.868Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.869Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.873Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:44.874Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -46,10 +46,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:32.957Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.958Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.978Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:32.978Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.023Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.023Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.028Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.028Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -63,10 +63,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.017Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.018Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.029Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.029Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.183Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.183Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.188Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.188Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -80,10 +80,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.058Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.058Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.065Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.065Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.264Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.264Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.268Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.268Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -97,10 +97,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.096Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.096Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.102Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.102Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.341Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.341Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.344Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.344Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -114,10 +114,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.127Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.128Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.133Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.133Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.830Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.831Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.834Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.834Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -131,10 +131,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.164Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.164Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.174Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.174Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.907Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.907Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.910Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.910Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -148,10 +148,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.218Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.218Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.223Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.224Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.985Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.985Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.989Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:45.989Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -165,10 +165,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.255Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.255Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.263Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.263Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.066Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.066Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.070Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.070Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -182,10 +182,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.295Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.296Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.301Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.302Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.146Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.146Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.149Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.149Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -199,8 +199,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.347Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.348Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.226Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.226Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.229Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.229Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -214,7 +216,379 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-28T17:41:33.358Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.358Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-28T17:41:33.399Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-10-28T17:41:33.400Z","pid":11548,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-28T20:27:46.307Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.307Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.310Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.311Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.385Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.385Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.388Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.388Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.464Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.464Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.467Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.467Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.542Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.542Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.544Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.545Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.627Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.627Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.630Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.631Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.775Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.775Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.779Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.779Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:46.918Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.918Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.921Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:46.921Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.331Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.331Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.341Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.341Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.380Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.380Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.385Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.385Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.465Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.465Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.468Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.468Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.542Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.543Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.545Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.546Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.623Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.623Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.626Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.626Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.739Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.739Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.742Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.742Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.854Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.854Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.857Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.857Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:47.938Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.938Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.941Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:47.941Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.018Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.019Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.022Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.022Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.101Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.101Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.107Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.107Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.187Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.187Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.190Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.190Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.264Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.264Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.267Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.267Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.340Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.340Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.343Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.343Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.417Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.417Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.420Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.420Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.492Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.492Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13497:59)
+    at PlaywrightServer.setTimeout (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:13747:57)
+    at Object.onReceiveHalfClose (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-10-28T20:27:48.500Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.500Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-28T20:27:48.591Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-28T20:27:48.591Z","pid":29976,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}

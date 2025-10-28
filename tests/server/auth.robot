@@ -17,7 +17,6 @@ TC001 - Cadastro de Usuário com Email Já Existente
     Should Be Equal As Strings    ${response.status_code}    400
     Log    Response da duplicação: ${response.json()}
 
-*** Test Cases ***
 TC002 - Cadastro com Dados Inválidos
     [Documentation]    Testa registro com dados faltantes/inválidos - CORRIGIDO
     ${timestamp}=    Get Time    epoch
