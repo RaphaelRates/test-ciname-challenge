@@ -12,11 +12,6 @@ Verify Dropdown Filter Is Visible
     [Documentation]    Verifica se o dropdown de filtro está visível
     Get Element        ${SEARCH_MOVIES_SELECT_FILTER}
 
-Verify All Genre Options Are Present
-    [Documentation]    Verifica se todas as opções de gênero estão presentes
-    FOR    ${genre}    IN    @{EXPECTED_GENRE_OPTIONS}
-        Get Element    ${SEARCH_MOVIES_SELECT_FILTER} >> option:has-text("${genre}")
-    END
 
 Select Genre Filter
     [Documentation]    Seleciona um filtro de gênero

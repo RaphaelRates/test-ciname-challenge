@@ -33,8 +33,7 @@ Verify Footer App Section
 Verify Footer Links Section
     [Documentation]    Verifica a seção de links úteis
     Verify Text In Element    ${FOOTER_LINKS_TITLE}    ${EXPECTED_FOOTER_LINKS_TITLE}
-    
-    # Verifica links
+
     Verify Text In Element    ${FOOTER_LINK_FILMES}     Filmes em Cartaz
     Get Attribute    ${FOOTER_LINK_FILMES}    href    ==    /
     
@@ -59,8 +58,7 @@ Verify Footer Contact Section
 Verify Footer Social Section
     [Documentation]    Verifica a seção de redes sociais
     Verify Text In Element    ${FOOTER_SOCIAL_TITLE}    ${EXPECTED_FOOTER_SOCIAL_TITLE}
-    
-    # Verifica ícones sociais
+
     Wait For Elements State    ${FOOTER_SOCIAL_FACEBOOK}    visible
     Wait For Elements State    ${FOOTER_SOCIAL_TWITTER}     visible
     Wait For Elements State    ${FOOTER_SOCIAL_INSTAGRAM}   visible

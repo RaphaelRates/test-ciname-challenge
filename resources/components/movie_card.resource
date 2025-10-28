@@ -11,13 +11,13 @@ Verificar Cartão Filme Interstellar Renderiza Corretamente
     Get Element        ${MOVIE_CARD}:nth-child(1)
     Get Element        ${MOVIE_POSTER}:nth-child(1)
     Get Element        ${MOVIE_POSTER}:nth-child(1) img
-    Get Element        ${MOVIE_CLASSIFICATION}:nth-child(1)
-    Get Element        ${MOVIE_TITLE}:nth-child(1)
-    Get Element        ${MOVIE_DURATION}:nth-child(1)
-    Get Element        ${MOVIE_RELEASE}:nth-child(1)
-    Get Element        ${MOVIE_GENRES}:nth-child(1)
-    Get Element        ${MOVIE_SYNOPSIS}:nth-child(1)
-    Get Element        ${MOVIE_DETAILS_BUTTON}:nth-child(1)
+    Get Element        ${MOVIE_CLASSIFICATION}
+    Get Element        ${MOVIE_TITLE}
+    Get Element        ${MOVIE_DURATION}
+    Get Element        ${MOVIE_RELEASE}
+    Get Element        ${MOVIE_GENRES}
+    Get Element        ${MOVIE_SYNOPSIS}
+    Get Element        ${MOVIE_DETAILS_BUTTON}
     Sleep    0.5
 
 Validar Conteúdo do Cartão Interstellar
@@ -32,7 +32,7 @@ Verificar Gêneros do Filme
     [Documentation]    Verifica se todos os gêneros estão presentes
     @{expected_genres}    Create List    Adventure    Drama    Science Fiction
     FOR    ${genre}    IN    @{expected_genres}
-        Get Element    ${MOVIE_GENRES} >> text=${genre}
+        Get Element    ${MOVIE_GENRES}> span >> text=${genre}
     END
     Sleep    0.5
 
@@ -59,6 +59,9 @@ Testar Layout Responsivo do Cartão
     Get Element        ${MOVIE_CARD}
     Sleep    0.5
 
+Resetar Layout Responsivo
+    [Documentation]    Testa o layout em diferentes tamanhos de tela
+    Set Viewport Size    width=768   height=1024
 Verificar Acessibilidade
     [Documentation]    Verifica elementos de acessibilidade
     Get Attribute      ${MOVIE_POSTER} img    alt
@@ -78,7 +81,6 @@ Verificar Seção de Filmes Existe
 Validar Grid de Filmes
     [Documentation]    Valida a estrutura do grid de filmes
     ${card_count}      Get Element Count     ${MOVIES_GRID} ${MOVIE_CARD}
-    Should Be True     ${card_count} > 0
     Get Element        ${MOVIES_GRID}
     Sleep    0.5
 

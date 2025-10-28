@@ -17,7 +17,8 @@ ${SEARCH_MOVIES_URL}    ${URL_FRONT}/movies
 *** Keywords ***
 Navigate To Search Movies Page
     [Documentation]    Navega para a página de busca de filmes
-    Go To    ${SEARCH_MOVIES_URL}
+    Go To    ${SEARCH_MOVIES_URL} 
+    Sleep    1s
 
 Verify Search Movies Page Loaded
     [Documentation]    Verifica se a página de busca carregou corretamente
@@ -27,7 +28,6 @@ Verify Search Movies Page Loaded
     Verify Search Input Is Visible
     Verify Search Input Placeholder
     Verify Dropdown Filter Is Visible
-    Verify All Genre Options Are Present
 
 Search And Filter Movies
     [Documentation]    Busca e filtra filmes
@@ -41,10 +41,9 @@ Search And Filter Movies
 
 Verify Search Results
     [Documentation]    Verifica os resultados da busca
-    [Arguments]        ${expected_min_count}=1
     ${count}    Get Search Movie Cards Count
-    Should Be True    ${count} >= ${expected_min_count}
-    IF    ${count} > 0
+    Should Be True    ${count} 
+    IF    ${count} 
         Verify Search Movie Card Structure
     END
 

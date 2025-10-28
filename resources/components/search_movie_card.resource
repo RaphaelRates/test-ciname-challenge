@@ -45,9 +45,10 @@ Click Movie Details Button In Search
     Click               ${card_locator} ${SEARCH_MOVIE_DETAILS_BUTTON}
 
 Get Search Movie Cards Count
-    [Documentation]    Retorna a quantidade de cards de filme nos resultados
-    ${count}    Get Element Count    ${SEARCH_MOVIE_CARD}
-    RETURN    ${count}
+    [Documentation]    Retorna a quantidade de cards de filme exibidos nos resultados
+    ${count}=    Get Element Count    main > div > div.movies-grid > div.movie-card
+    Should Be True    ${count} > 0
+
 
 Verify Movie Card Is Present In Search
     [Documentation]    Verifica se um card de filme específico está presente

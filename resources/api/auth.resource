@@ -1,45 +1,57 @@
 *** Settings ***
-Documentation    Recursos relacionados à autenticação de usuários via API
-
 Library    RequestsLibrary
 Library    Collections
 
-Resource    ../variables.resource
-Resource    ../base.resource
+Resource    ../../resources/variables.resource
+Resource    ../../resources/base.resource
+
+
 
 *** Keywords ***
-*** Keywords ***
-Create API Session
-    [Arguments]    ${alias}=api
-    Create Session    ${alias}    ${URL_API}    headers=${DEFAULT_HEADERS}
-
-Register User
-    [Arguments]    ${name}    ${email}    ${password}    ${expected_status}=201
-    ${payload}=    Create Dictionary    name=${name}    email=${email}    password=${password}
-    ${resp}=    POST on Session   api    /auth/register    json=${payload}
-    Status Should Be    ${resp}    ${expected_status}
-    ${body}=    Evaluate    ${resp.json()}
-    Should Be True    ${body['success'] is True}
-    [Return]    ${body}
-
-Register User With Fixture
-    [Arguments]    ${fixture_name}    ${expected_status}=201
-    ${user_data}=    Get Auth Fixture    ${fixture_name}
-    Log To Console    ${user_data}
-    ${response}=    Register User    ${user_data['name']}    ${user_data['email']}    ${user_data['password']}    ${expected_status}
-    [Return]    ${response}    ${user_data}
-
-Register Random User
-    [Documentation]    Registra um usuário com dados únicos gerados dinamicamente
-    ${user_data}=     Generate User with Faker
-    ${response}=      Register User    ${user_data['name']}    ${user_data['email']}    ${user_data['password']}    201
-    [Return]          ${response}    ${user_data}
+Register New User
+    [Arguments]    ${name}    ${email}    ${password}
+    ${body}=    Create Dictionary    name=${name}    email=${email}    password=${password}
+    ${response}=    POST    ${URL_FRONT}/auth/register    json=${body}    expected_status=any
+    RETURN    ${response}
 
 Login User
-    [Arguments]    ${email}    ${password}    ${expected_status}=200
-    ${payload}=    Create Dictionary    email=${email}    password=${password}
-    ${resp}=    POST on Session   ${URL_API}    /auth/login    json=${payload}
-    Status Should Be    ${resp}    ${expected_status}
-    ${body}=    Evaluate    ${resp.json()}
-    [Return]    ${body}
+    [Arguments]    ${email}    ${password}
+    ${body}=    Create Dictionary    email=${email}    password=${password}
+    ${response}=    POST    ${URL_FRONT}/auth/login    json=${body}    expected_status=any
+    RETURN    ${response}
 
+Get User Profile
+    [Arguments]    ${token}
+    ${headers}=    Create Dictionary    Authorization=Bearer ${token}
+    ${response}=    GET    ${URL_FRONT}/auth/me    headers=${headers}    expected_status=any
+    RETURN    ${response}
+
+Update User Profile
+    [Arguments]    ${token}    ${name}=${NONE}    ${current_password}=${NONE}    ${new_password}=${NONE}
+    ${body}=    Create Dictionary
+    Run Keyword If    '${name}' != '${NONE}'    Set To Dictionary    ${body}    name=${name}
+    Run Keyword If    '${current_password}' != '${NONE}'    Set To Dictionary    ${body}    currentPassword=${current_password}
+    Run Keyword If    '${new_password}' != '${NONE}'    Set To Dictionary    ${body}    newPassword=${new_password}
+    ${headers}=    Create Dictionary    Authorization=Bearer ${token}
+    ${response}=    PUT    ${URL_FRONT}/auth/profile    json=${body}    headers=${headers}    expected_status=any
+    RETURN    ${response}
+
+Extract Token From Response
+    [Arguments]    ${response}
+    ${json}=    Set Variable    ${response.json()}
+    ${token}=    Get From Dictionary    ${json['data']}    token
+    RETURN    ${token}
+
+Verify Success Response
+    [Arguments]    ${response}    ${expected_status}=200
+    Should Be Equal As Numbers    ${response.status_code}    ${expected_status}
+    ${json}=    Set Variable    ${response.json()}
+    Dictionary Should Contain Key    ${json}    success
+    Should Be True    ${json['success']}
+
+Verify Error Response
+    [Arguments]    ${response}    ${expected_status}    ${expected_message}=${NONE}
+    Should Be Equal As Numbers    ${response.status_code}    ${expected_status}
+    ${json}=    Set Variable    ${response.json()}
+    Should Be True    not ${json['success']}
+    Run Keyword If    '${expected_message}' != '${NONE}'    Should Contain    ${json['message']}    ${expected_message}

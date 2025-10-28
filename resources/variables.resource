@@ -50,15 +50,15 @@ ${MENU_MOVIES}                         ${NAV_MENU_ITEMS}:nth-child(5) > a
 
 ${MOVIES_SECTION}             main > div > div.featured-movies
 ${MOVIES_GRID}                ${MOVIES_SECTION} > div
-${MOVIE_CARD}                 ${MOVIES_GRID} > div > div
+${MOVIE_CARD}                 main > div > div.featured-movies > div > div:nth-child(1)
 ${MOVIE_POSTER}               ${MOVIE_CARD} > div.movie-poster
 ${MOVIE_CLASSIFICATION}       ${MOVIE_POSTER} > div.movie-classification
-${MOVIE_TITLE}                ${MOVIE_CARD} > div.movie-title
-${MOVIE_DURATION}             ${MOVIE_CARD} > div.movie-duration
-${MOVIE_RELEASE}              ${MOVIE_CARD} > div.movie-release
-${MOVIE_GENRES}               ${MOVIE_CARD} > div.movie-genres
-${MOVIE_SYNOPSIS}             ${MOVIE_CARD} > div.movie-synopsis
-${MOVIE_DETAILS_BUTTON}       .btn-primary
+${MOVIE_TITLE}                main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > h3
+${MOVIE_DURATION}             main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > div.movie-meta > span.movie-duration
+${MOVIE_RELEASE}              main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > div.movie-meta > span.movie-release
+${MOVIE_GENRES}               main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > div.movie-genres
+${MOVIE_SYNOPSIS}             main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > p
+${MOVIE_DETAILS_BUTTON}       main > div > div.featured-movies > div > div:nth-child(1) > div.movie-info > a
 ${MOVIES_TITLE}               ${MOVIES_SECTION} h2
   
 
@@ -129,7 +129,7 @@ ${EXPECTED_FOOTER_COPYRIGHT}       © 2025 Cinema App. Todos os direitos reserva
 
 #root=/movies - section=Search Movies
 
-${SEARCH_MOVIES_SECTION}            main > div.search-movies
+${SEARCH_MOVIES_SECTION}            main > div.movies-container
 ${SEARCH_MOVIES_H1}                 ${SEARCH_MOVIES_SECTION} > h1
 ${SEARCH_MOVIES_INPUT}              ${SEARCH_MOVIES_SECTION} > div.filters-container > div.search-box > input[type=text]
 ${SEARCH_MOVIES_SELECT_FILTER}      ${SEARCH_MOVIES_SECTION} > div.filters-container > div.genre-filter > select
@@ -143,20 +143,20 @@ ${SEARCH_MOVIES_OPTION_CRIME}        ${SEARCH_MOVIES_SELECT_FILTER} > option[val
 ${SEARCH_MOVIES_OPTION_ROMANCE}      ${SEARCH_MOVIES_SELECT_FILTER} > option[value="Romance"]
 ${SEARCH_MOVIES_OPTION_ANIMATION}    ${SEARCH_MOVIES_SELECT_FILTER} > option[value="Animation"]
 
-${EXPECTED_SEARCH_MOVIES_H1}        Search Movies
-${EXPECTED_SEARCH_PLACEHOLDER}      Search for movies...
-${EXPECTED_GENRE_OPTIONS}           All    Adventure    Drama    Science Fiction    Action    Fantasy    Crime    Romance    Animation
+${EXPECTED_SEARCH_MOVIES_H1}        Filmes em Cartaz
+${EXPECTED_SEARCH_PLACEHOLDER}      Buscar filmes...
+@{EXPECTED_GENRE_OPTIONS}           Todos os gêneros    Adventure    Drama    Science Fiction    Action    Fantasy    Crime    Romance    Animation
 
 ${SEARCH_MOVIES_GRID}               main > div > div.movies-grid 
-${SEARCH_MOVIE_CARD}                       ${SEARCH_MOVIES_GRID} > div > div
-${SEARCH_MOVIE_POSTER}                     ${SEARCH_MOVIE_CARD} > div.movie-poster
-${SEARCH_MOVIE_CLASSIFICATION}             ${SEARCH_MOVIE_POSTER} > div.movie-classification
-${SEARCH_MOVIE_TITLE}                      ${SEARCH_MOVIE_CARD} > div.movie-title
-${SEARCH_MOVIE_DURATION}                   ${SEARCH_MOVIE_CARD} > div.movie-duration
-${SEARCH_MOVIE_RELEASE}                    ${SEARCH_MOVIE_CARD} > div.movie-release
-${SEARCH_MOVIE_GENRES}                     ${SEARCH_MOVIE_CARD} > div.movie-genres
-${SEARCH_MOVIE_SYNOPSIS}                   ${SEARCH_MOVIE_CARD} > div.movie-synopsis
-${SEARCH_MOVIE_DETAILS_BUTTON}             .btn-primary
+${SEARCH_MOVIE_CARD}                       main > div > div.movies-grid > div.movie-card 
+${SEARCH_MOVIE_POSTER}                      div.movie-poster
+${SEARCH_MOVIE_CLASSIFICATION}              div.movie-classification
+${SEARCH_MOVIE_TITLE}                       div.movie-info > h3
+${SEARCH_MOVIE_DURATION}                    div.movie-info > div.movie-meta > span.movie-duration
+${SEARCH_MOVIE_RELEASE}                     div.movie-info > div.movie-meta > span.movie-release
+${SEARCH_MOVIE_GENRES}                      div.movie-info > div.movie-genres
+${SEARCH_MOVIE_SYNOPSIS}                    div.movie-info > p.movie-synopsis
+${SEARCH_MOVIE_DETAILS_BUTTON}             div.movie-info > .btn-primary
 ${SEARCH_MOVIES_TITLE}                     ${SEARCH_MOVIES_SECTION} h2
 
 
