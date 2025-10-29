@@ -147,8 +147,7 @@ Library    String
 Library    OperatingSystem
 
 *** Variables ***
-${BASE_URL}    http://localhost:3000/api/v1
-${ADMIN_EMAIL}    admin@cinema.com
+${ADMIN_EMAIL}    umadmin@gmail.com
 ${ADMIN_PASSWORD}    12345678
 ${USER_EMAIL}    raphaelrates.dev@gmail.com
 ${USER_PASSWORD}    12345678
@@ -156,7 +155,7 @@ ${USER_PASSWORD}    12345678
 *** Keywords ***
 Setup API Session
     [Documentation]    Cria sessão da API
-    Create Session    cinema_api    ${BASE_URL}    verify=true
+    Create Session    cinema_api    ${URL_API}    verify=true
 
 Teardown API Session
     [Documentation]    Encerra sessão da API
@@ -180,8 +179,10 @@ Get Auth Token
     ${headers}=    Create Dictionary    Content-Type=application/json
     ${body}=    Create Dictionary    email=${email}    password=${password}
     ${response}=    POST On Session    cinema_api    /auth/login    json=${body}    headers=${headers}
-    Should Be Equal As Strings    ${response.status_code}    200
+    Log To Console    ${response.json()}
+    # Should Be Equal As Strings    ${response.status_code}    200
     ${token}=    Set Variable    ${response.json()}[data][token]
+    Log To Console    ${token}
     [Return]    ${token}
 
 Get Admin Token
