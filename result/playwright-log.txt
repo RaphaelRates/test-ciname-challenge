@@ -1,4 +1,4 @@
-{"level":30,"time":"2025-10-29T18:37:24.063Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:55178"}
+{"level":30,"time":"2025-10-29T19:34:10.475Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Listening on 127.0.0.1:65436"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -12,10 +12,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:24.389Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.389Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.393Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.393Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:10.939Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:10.939Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:10.943Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:10.943Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -29,10 +29,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:24.472Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.472Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.476Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.476Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.022Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.022Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.025Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.025Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -46,10 +46,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:24.586Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.586Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.592Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:24.592Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.107Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.107Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.111Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.111Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -63,10 +63,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.481Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.481Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.484Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.484Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.900Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.900Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.903Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.903Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -80,10 +80,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.503Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.504Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.507Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.507Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.917Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.917Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.921Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:11.921Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -97,10 +97,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.590Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.590Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.594Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.594Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.202Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.202Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.206Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.206Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -114,10 +114,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.681Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.682Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.684Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.684Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.495Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.495Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.498Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.498Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -131,10 +131,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.761Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.761Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.764Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.764Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.712Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.712Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.714Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:12.714Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -148,10 +148,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.848Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.848Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.851Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.852Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.262Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.262Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.266Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.266Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -165,10 +165,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:25.958Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.958Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.960Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:25.960Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.545Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.545Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.549Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.549Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -182,10 +182,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.052Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.052Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.054Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.055Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.834Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.834Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.838Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:13.838Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -199,10 +199,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.134Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.134Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.137Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.137Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.049Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.049Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.052Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.052Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -216,10 +216,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.225Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.225Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.228Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.228Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.336Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.336Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.339Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.339Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -233,10 +233,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.329Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.329Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.333Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.333Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.619Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.619Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.622Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.622Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -250,10 +250,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.417Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.417Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.421Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.421Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.835Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.835Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.839Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:14.839Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -267,10 +267,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.511Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.511Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.514Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.514Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.118Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.118Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.121Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.121Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -284,10 +284,10 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.522Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.522Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.526Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.526Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.129Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.129Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.131Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.131Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -301,8 +301,8 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.611Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.611Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.411Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.411Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\raphael\anaconda3\Lib\site-packages\Browser\wrapper\index.js:12547:15)
@@ -316,7 +316,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-10-29T18:37:26.618Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.618Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-10-29T18:37:26.690Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-10-29T18:37:26.690Z","pid":25788,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-29T19:34:15.416Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.416Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-29T19:34:15.484Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-29T19:34:15.484Z","pid":19388,"hostname":"Raphael-L2R2FIL","msg":"End of node method closeAllBrowsers"}

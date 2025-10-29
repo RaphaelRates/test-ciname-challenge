@@ -1,8 +1,6 @@
 *** Settings ***
 Documentation    Arquivo responsável por funcionalidades gerais de todos os testes
 
-Resource         variables.resource
-
 Library    Browser
 Library    Screenshot
 Library    OperatingSystem
@@ -12,7 +10,13 @@ Library    String
 Library    Faker
 Library    JSONLibrary
 
+Resource    variables.resource
+
 *** Keywords ***
+
+# ==================================================
+# Keywords para Testes Web (Browser)
+# ==================================================
 
 Open Page
     [Arguments]    ${root}=/
@@ -42,15 +46,53 @@ Verify Text In Element
     Should Be Equal As Strings    ${actual_text.strip()}    ${expected_text.strip()}
     ...    msg=Texto não corresponde no elemento '${selector}'\nEsperado: '${expected_text}'\nEncontrado: '${actual_text}'
 
+Setup Browser
+    New Browser    chromium    headless=False
+    New Context
+    New Page    ${URL_FRONT}/
 
+Teardown Browser
+    Close Page
+    Close Context
+    Close Browser
+
+Suite Setup
+    [Documentation]    Configuração inicial da suite de testes
+    New Browser    ${BROWSER}    headless=${HEADLESS}
+    New Context    viewport={'width': 1920, 'height': 1080}
+
+Suite Teardown
+    [Documentation]    Finalização da suite de testes
+    Close Browser
+
+Test Setup
+    [Documentation]    Configuração inicial de cada teste
+    New Page    about:blank
+
+Test Teardown
+    [Documentation]    Finalização de cada teste
+    Run Keyword If Test Failed    Take Screenshot    fullPage=True
+    Close Page
+
+Gerar Senha Aleatória
+    ${random_senha}=    Generate Random String    12    [LETTERS][NUMBERS]
+    [Return]    ${random_senha}
+
+Verificar Página Registro Carregou
+    Get Url    contains    /register
+    Get Element States    css=.register-form    contains    visible
+
+# ==================================================
+# Keywords para Fixtures e Dados de Teste
+# ==================================================
 
 Load JSON Fixture
     [Documentation]    Carrega um fixture JSON do arquivo
-    [Arguments]    ${fixture_file}    ${fixture_name}=None
+    [Arguments]    ${fixture_file}    ${fixture_name}=${None}
     ${file_path}=    Set Variable    ${EXECDIR}${/}resources${/}fixtures${/}${fixture_file}
     ${json_data}=    Get File    ${file_path}    encoding=UTF-8
     ${all_fixtures}=    Evaluate    json.loads('''${json_data}''')    json
-    IF    '${fixture_name}' != 'None'
+    IF    '${fixture_name}' != '${None}'
         ${fixture}=    Get From Dictionary    ${all_fixtures}    ${fixture_name}
         RETURN    ${fixture}
     ELSE
@@ -82,7 +124,6 @@ Get Auth Fixture
     ${fixture}=    Load JSON Fixture    auth.json    ${fixture_name}
     RETURN    ${fixture}
 
-
 Generate Update Profile Fixture
     [Documentation]    Gera dados aleatórios para atualização de perfil
     ${timestamp}=    Get Time    epoch
@@ -92,67 +133,22 @@ Generate Update Profile Fixture
     ...    name=${random_name}
     ...    email=${random_email}
     RETURN    ${update_data}
- Generate User with Faker
+
+Generate User with Faker
     [Documentation]    Gera dados aleatórios para registro de usuário
-    ${random_name}=    Faker Name
-    ${random_email}=    Faker Email
-    ${random_password}=    Faker Password    length=12    special_chars=True    digits=True    upper_case=True    lower_case=True
+    ${random_name}=    Faker.Name
+    ${random_email}=    Faker.Email
+    ${random_password}=    Faker.Password    length=12    special_chars=True    digits=True    upper_case=True    lower_case=True
     &{user_data}=    Create Dictionary
     ...    name=${random_name}
     ...    email=${random_email}
     ...    password=${random_password}
     RETURN    ${user_data}
 
-Suite Setup
-    [Documentation]    Configuração inicial da suite de testes
-    New Browser    ${BROWSER}    headless=${HEADLESS}
-    New Context    viewport={'width': 1920, 'height': 1080}
+# ==================================================
+# Keywords para API Testing
+# ==================================================
 
-Setup Browser
-    New Browser    chromium    headless=False
-    New Context
-    New Page    ${URL_FRONT}/
-
-Teardown Browser
-    Close Page
-    Close Context
-    Close Browser
-
-Suite Teardown
-    [Documentation]    Finalização da suite de testes
-    Close Browser
-
-Test Setup
-    [Documentation]    Configuração inicial de cada teste
-    New Page    about:blank
-
-Test Teardown
-    [Documentation]    Finalização de cada teste
-    Run Keyword If Test Failed    Take Screenshot    fullPage=True
-    Close Page
-
-Gerar Senha Aleatória
-    ${random_senha}=    Generate Random String    12    [LETTERS][NUMBERS]
-    [Return]    ${random_senha}
-
-Verificar Página Registro Carregou
-    Get Url    contains    /register
-    Get Element States    css=.register-form    contains    visible
-
-
-*** Settings ***
-Library    RequestsLibrary
-Library    Collections
-Library    String
-Library    OperatingSystem
-
-*** Variables ***
-${ADMIN_EMAIL}    umadmin@gmail.com
-${ADMIN_PASSWORD}    12345678
-${USER_EMAIL}    raphaelrates.dev@gmail.com
-${USER_PASSWORD}    12345678
-
-*** Keywords ***
 Setup API Session
     [Documentation]    Cria sessão da API
     Create Session    cinema_api    ${URL_API}    verify=true
@@ -176,19 +172,17 @@ Generate Unique Email
 Get Auth Token
     [Documentation]    Obtém token de autenticação
     [Arguments]    ${email}    ${password}
+    
     ${headers}=    Create Dictionary    Content-Type=application/json
     ${body}=    Create Dictionary    email=${email}    password=${password}
     ${response}=    POST On Session    cinema_api    /auth/login    json=${body}    headers=${headers}
-    Log To Console    ${response.json()}
-    # Should Be Equal As Strings    ${response.status_code}    200
     ${token}=    Set Variable    ${response.json()}[data][token]
-    Log To Console    ${token}
     [Return]    ${token}
 
 Get Admin Token
     [Documentation]    Obtém token de administrador
     ${token}=    Get Auth Token    ${ADMIN_EMAIL}    ${ADMIN_PASSWORD}
-    [Return]    ${token}
+    [Return]    Bearer ${token}
 
 Get User Token
     [Documentation]    Obtém token de usuário comum
@@ -207,7 +201,13 @@ Should Be Success Response
     Should Be Equal As Strings    ${response.status_code}    ${expected_status}
     Should Be Equal As Strings    ${response.json()}[success]    True
 
+Should Be Error Response
+    [Arguments]    ${response}    ${expected_status}=400
+    Should Be Equal As Strings    ${response.status_code}    ${expected_status}
+    Should Be Equal As Strings    ${response.json()}[success]    False
+
 Should Be Error Response Message
-    [Arguments]    ${response}    ${expected_message}
-    Should Be Equal As Strings    ${response.json()}[message]   ${expected_message}
-    Should Be Equal As Strings    ${response.json()}[success]    false
+    [Arguments]    ${response}    ${expected_message}    ${expected_status}=400
+    Should Be Equal As Strings    ${response.status_code}    ${expected_status}
+    Should Be Equal As Strings    ${response.json()}[success]    False
+    Should Be Equal As Strings    ${response.json()}[message]    ${expected_message}

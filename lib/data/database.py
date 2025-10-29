@@ -14,9 +14,7 @@ def clean_user(user_email):
     user = users.find_one({'email': user_email})
 
     if user:
-        # Remove todas as reservas do usuário
         reservations.delete_many({'user': user['_id']})
-        # Remove o usuário
         users.delete_many({'email': user_email})
         print(f'User {user_email} and all their reservations removed')
 
@@ -29,22 +27,20 @@ def remove_user(email):
 @keyword('Insert user from database')
 def insert_user(user_data):
     users = db['users']
-    
-    # Verifica se o usuário já existe
+
     existing_user = users.find_one({'email': user_data['email']})
     if existing_user:
         print(f'User with email {user_data["email"]} already exists')
         return existing_user['_id']
     
-    # Cria hash da senha usando bcrypt (compatível com o schema)
     hash_pass = bcrypt.hashpw(user_data['password'].encode('utf-8'), bcrypt.gensalt(10))
     
     doc = {
         'name': user_data['name'],
-        'email': user_data['email'].lower(),  # Converte para lowercase como no schema
+        'email': user_data['email'].lower(), 
         'password': hash_pass,
-        'role': user_data.get('role', 'user'),  # Usa 'user' como padrão se não especificado
-        'createdAt': user_data.get('createdAt')  # Opcional
+        'role': user_data.get('role', 'user'), 
+        'createdAt': user_data.get('createdAt') 
     }
     
     result = users.insert_one(doc)

@@ -13,8 +13,8 @@ ${LOGIN_ENDPOINT}        ${AUTH_BASE_URL}/login
 ${ME_ENDPOINT}           ${AUTH_BASE_URL}/me
 ${PROFILE_ENDPOINT}      ${AUTH_BASE_URL}/profile
 
-${ADMIN_EMAIL}          admin@example.com
-${ADMIN_PASSWORD}       admin123      
+${ADMIN_EMAIL}    umadmin@gmail.com
+${ADMIN_PASSWORD}    12345678     
 ${USER_EMAIL}           test@example.com    
 ${USER_PASSWORD}        password123     
 ${NEW_USER_NAME}        Novo Usuario Teste

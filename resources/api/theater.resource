@@ -59,38 +59,40 @@ Delete Theater
     [Return]    ${response}
 
 Generate Fake Theater Data
-    [Arguments]    ${name}=${None}    ${capacity}=${None}    ${type}=${None}
-    [Documentation]    Gera dados fake para theater
+    [Arguments]    ${name}=${None}    ${capacity}=${None}
+    [Documentation]    Gera dados fake para theater com type fixo 'standard'
     ${timestamp}=    Get Time    epoch
-    ${random_num}=    Evaluate    random.randint(1000, 9999)
-    
-    ${fake_name}=    Run Keyword If    $name is ${None}    Set Variable    Theater_${timestamp}_${random_num}
+    ${random_num}=    Evaluate    random.randint(1, 10)
+    ${fake_name}=    Run Keyword If    '${name}' == '${None}'    Set Variable    Theater_${timestamp}_${random_num}
     ...    ELSE    Set Variable    ${name}
-    ${fake_capacity}=    Run Keyword If    $capacity is ${None}    Evaluate    random.randint(50, 300)
+    ${fake_capacity}=    Run Keyword If    '${capacity}' == '${None}'    Evaluate    random.randint(50, 300)
     ...    ELSE    Set Variable    ${capacity}
-    ${fake_type}=    Run Keyword If    $type is ${None}    Evaluate    random.choice($THEATER_TYPES)
-    ...    ELSE    Set Variable    ${type}
-    
     ${theater_data}=    Create Dictionary
     ...    name=${fake_name}
     ...    capacity=${fake_capacity}
-    ...    type=${fake_type}
-    
+    ...    type=standard
     [Return]    ${theater_data}
+
 
 Verify Theater Response Structure
     [Arguments]    ${response}
     [Documentation]    Verifica estrutura da resposta de theater
+    
     Should Be Equal As Strings    ${response.status_code}    200
-    Should Be Equal As Strings    ${response.json()}[success]    True
+    
     ${json}=    Set Variable    ${response.json()}
+    Dictionary Should Contain Key    ${json}    success
+    Should Be True    ${json["success"]}
+
     Dictionary Should Contain Key    ${json}    data
-    ${data}=    Set Variable    ${json}[data]
-    Dictionary Should Contain Key    ${data}    _id
+    ${data}=    Set Variable    ${json["data"]}
+    
+    Dictionary Should Contain Key    ${data}    id
     Dictionary Should Contain Key    ${data}    name
     Dictionary Should Contain Key    ${data}    capacity
     Dictionary Should Contain Key    ${data}    type
     Dictionary Should Contain Key    ${data}    createdAt
+
 
 Verify Theater List Structure
     [Arguments]    ${response}
@@ -105,7 +107,7 @@ Verify Theater Created Successfully
     [Documentation]    Verifica criação bem-sucedida de theater
     Should Be Equal As Strings    ${response.status_code}    201
     ${json}=    Set Variable    ${response.json()}
-    Dictionary Should Contain Key    ${json}    _id
+    Dictionary Should Contain Key    ${json}    id
     Dictionary Should Contain Key    ${json}    name
     Dictionary Should Contain Key    ${json}    capacity
     Dictionary Should Contain Key    ${json}    type
