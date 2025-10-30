@@ -14,9 +14,6 @@ Resource    variables.resource
 
 *** Keywords ***
 
-# ==================================================
-# Keywords para Testes Web (Browser)
-# ==================================================
 
 Open Page
     [Arguments]    ${root}=/
@@ -82,9 +79,6 @@ Verificar Página Registro Carregou
     Get Url    contains    /register
     Get Element States    css=.register-form    contains    visible
 
-# ==================================================
-# Keywords para Fixtures e Dados de Teste
-# ==================================================
 
 Load JSON Fixture
     [Documentation]    Carrega um fixture JSON do arquivo
@@ -207,7 +201,7 @@ Should Be Error Response
     Should Be Equal As Strings    ${response.json()}[success]    False
 
 Should Be Error Response Message
-    [Arguments]    ${response}    ${expected_message}    ${expected_status}=400
+    [Arguments]    ${response}    ${expected_message}    ${expected_status}=404
     Should Be Equal As Strings    ${response.status_code}    ${expected_status}
     Should Be Equal As Strings    ${response.json()}[success]    False
     Should Be Equal As Strings    ${response.json()}[message]    ${expected_message}

@@ -21,38 +21,18 @@ Get All Movies
     Run Keyword If    $limit is not None    Set To Dictionary    ${params}    limit=${limit}
     Run Keyword If    $page is not None    Set To Dictionary    ${params}    page=${page}
     
-    ${response}=    GET On Session    cinema_api    /movies    headers=${headers}    params=${params}
+    ${response}=    GET On Session    cinema_api    /movies    headers=${headers}    params=${params}    expected_status=any
     [Return]    ${response}
 
 Get Movie By ID
-    [Arguments]    ${movie_id}    ${token}=${None}
+    [Arguments]    ${movie_id}    ${token}=${None}    ${expected_status}=any
     ${headers}=    Run Keyword If    $token is not None    Create Auth Headers    ${token}
     ...    ELSE    Create Dictionary    Content-Type=application/json
-    ${response}=    GET On Session    cinema_api    /movies/${movie_id}    headers=${headers}
+    ${response}=    GET On Session    cinema_api    /movies/${movie_id}    headers=${headers}    expected_status=${expected_status}
     [Return]    ${response}
 
-Get All Movies With Fallback
-    [Arguments]    ${token}=${None}    ${title}=${None}    ${genre}=${None}    ${sort}=${None}    ${limit}=${None}    ${page}=${None}
-    ${headers}=    Run Keyword If    $token is not None    Create Auth Headers    ${token}
-    ...    ELSE    Create Dictionary    Content-Type=application/json
-    
-    ${params}=    Create Dictionary
-    Run Keyword If    $title is not None    Set To Dictionary    ${params}    title=${title}
-    Run Keyword If    $genre is not None    Set To Dictionary    ${params}    genre=${genre}
-    Run Keyword If    $sort is not None    Set To Dictionary    ${params}    ${sort}
-    Run Keyword If    $limit is not None    Set To Dictionary    ${params}    limit=${limit}
-    Run Keyword If    $page is not None    Set To Dictionary    ${params}    page=${page}
-    
-    ${response}=    GET On Session    cinema_api    /movies    headers=${headers}    params=${params}
-    [Return]    ${response}
-
-Create Test Movie If Needed
-    [Arguments]    ${movie_data}
-    ${token}=    Get Admin Token
-    ${response}=    Create Movie    ${token}    &{movie_data}
-    [Return]    ${response}
 Create Movie
-    [Arguments]    ${token}    ${title}    ${synopsis}    ${director}    ${genres}    ${duration}    ${classification}    ${poster}=${None}    ${release_date}=${None}
+    [Arguments]    ${token}    ${title}    ${synopsis}    ${director}    ${genres}    ${duration}    ${classification}    ${poster}=${None}    ${release_date}=${None}    ${expected_status}=any
     ${headers}=    Create Auth Headers    ${token}
     ${body}=    Create Dictionary
     ...    title=${title}
@@ -65,11 +45,11 @@ Create Movie
     Run Keyword If    $poster is not None    Set To Dictionary    ${body}    poster=${poster}
     Run Keyword If    $release_date is not None    Set To Dictionary    ${body}    releaseDate=${release_date}
     
-    ${response}=    POST On Session    cinema_api    /movies    json=${body}    headers=${headers}
+    ${response}=    POST On Session    cinema_api    /movies    json=${body}    headers=${headers}    expected_status=${expected_status}
     [Return]    ${response}
 
 Update Movie
-    [Arguments]    ${token}    ${movie_id}    ${title}=${None}    ${synopsis}=${None}    ${director}=${None}    ${genres}=${None}    ${duration}=${None}    ${classification}=${None}    ${poster}=${None}    ${release_date}=${None}
+    [Arguments]    ${token}    ${movie_id}    ${title}=${None}    ${synopsis}=${None}    ${director}=${None}    ${genres}=${None}    ${duration}=${None}    ${classification}=${None}    ${poster}=${None}    ${release_date}=${None}    ${expected_status}=any
     ${headers}=    Create Auth Headers    ${token}
     ${body}=    Create Dictionary
     
@@ -82,13 +62,13 @@ Update Movie
     Run Keyword If    $poster is not None    Set To Dictionary    ${body}    poster=${poster}
     Run Keyword If    $release_date is not None    Set To Dictionary    ${body}    releaseDate=${release_date}
     
-    ${response}=    PUT On Session    cinema_api    /movies/${movie_id}    json=${body}    headers=${headers}
+    ${response}=    PUT On Session    cinema_api    /movies/${movie_id}    json=${body}    headers=${headers}    expected_status=${expected_status}
     [Return]    ${response}
 
 Delete Movie
-    [Arguments]    ${token}    ${movie_id}
+    [Arguments]    ${token}    ${movie_id}    ${expected_status}=any
     ${headers}=    Create Auth Headers    ${token}
-    ${response}=    DELETE On Session    cinema_api    /movies/${movie_id}    headers=${headers}
+    ${response}=    DELETE On Session    cinema_api    /movies/${movie_id}    headers=${headers}    expected_status=${expected_status}
     [Return]    ${response}
 
 Extract Movie ID From Response
@@ -119,5 +99,5 @@ Create Sample Movie Data
     ...    duration=${{120 + ${movie_number}}}
     ...    classification=PG-13
     ...    poster=movie${movie_number}.jpg
-    ...    releaseDate=${{"2023-0${movie_number}-01" if ${movie_number} < 10 else "2023-${movie_number}-01"}}
+    ...    releaseDate=2023-01-01
     [Return]    ${movie_data}
