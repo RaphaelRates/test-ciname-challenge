@@ -43,27 +43,20 @@ TC044 - Get Sessions Filtered By Movie
     ${response}=    Get All Data Sessions    expected_status=200
     ${sessions_count}=    Get Length    ${response.json()}[data]
     
-    Run Keyword If    ${sessions_count} > 0
-    ...    Run Keywords
-    ...    ${movie_id}=    Set Variable    ${response.json()}[data][0][movie][_id]
-    ...    AND    ${filtered_response}=    Get All Data Sessions    movie=${movie_id}    expected_status=200
-    ...    AND    Should Be Success Response    ${filtered_response}    200
-    ...    ELSE
-    ...    Log    Não há sessões disponíveis para filtrar
+    ${movie_id}=    Set Variable    ${response.json()}[data][0][movie][_id]
+    ${filtered_response}=    Get All Data Sessions    movie=${movie_id}    expected_status=200
+    Should Be Success Response    ${filtered_response}    200
+
 
 TC045 - Get Sessions Filtered By Theater
     [Documentation]    Filtrar sessões por sala
     [Tags]    sessions    read    filter
     ${response}=    Get All Data Sessions    expected_status=200
     ${sessions_count}=    Get Length    ${response.json()}[data]
-    
-    Run Keyword If    ${sessions_count} > 0
-    ...    Run Keywords
-    ...    ${theater_id}=    Set Variable    ${response.json()}[data][0][theater][_id]
-    ...    AND    ${filtered_response}=    Get All Data Sessions    theater=${theater_id}    expected_status=200
-    ...    AND    Should Be Success Response    ${filtered_response}    200
-    ...    ELSE
-    ...    Log    Não há sessões disponíveis para filtrar
+
+    ${theater_id}=    Set Variable    ${response.json()}[data][0][theater][_id]
+    ${filtered_response}=    Get All Data Sessions    theater=${theater_id}    expected_status=200
+    Should Be Success Response    ${filtered_response}    200
 
 TC046 - Get Sessions Filtered By Date
     [Documentation]    Filtrar sessões por data
@@ -78,14 +71,10 @@ TC047 - Get Session By Valid ID
     ${response}=    Get All Data Sessions    expected_status=200
     ${sessions_count}=    Get Length    ${response.json()}[data]
     
-    Run Keyword If    ${sessions_count} > 0
-    ...    Run Keywords
-    ...    ${session_id}=    Set Variable    ${response.json()}[data][0][_id]
-    ...    AND    ${get_response}=    Get Session By ID    ${session_id}    expected_status=200
-    ...    AND    Should Be Success Response    ${get_response}    200
-    ...    AND    Should Be Equal As Strings    ${get_response.json()}[data][_id]    ${session_id}
-    ...    ELSE
-    ...    Log    Não há sessões disponíveis para testar
+    ${session_id}=    Set Variable    ${response.json()}[data][0][_id]
+    ${get_response}=    Get Session By ID    ${session_id}    expected_status=200
+    Should Be Success Response    ${get_response}    200
+    Should Be Equal As Strings    ${get_response.json()}[data][_id]    ${session_id}
 
 TC048 - Get Session By Invalid ID
     [Documentation]    Tentativa de buscar sessão com ID inválido
@@ -103,18 +92,16 @@ TC050 - Create Data Session As Admin
     [Documentation]    Criar nova sessão como administrador
     [Tags]    sessions    create    admin
     ${admin_token}=    Get Admin Token
-    
-    # Obtém um filme e sala válidos
+
     ${movies_response}=    Get All Movies    expected_status=200
     ${theaters_response}=    Get All Theaters    expected_status=200
     
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
     
-    Run Keyword If    ${movies_count} > 0 and ${theaters_count} > 0
-    ...    Create Valid Session    ${admin_token}    ${movies_response}    ${theaters_response}
-    ...    ELSE
-    ...    Log    Não há filmes ou salas disponíveis para criar sessão
+
+    Create Valid Session    ${admin_token}    ${movies_response}    ${theaters_response}
+
 
 TC051 - Create Data Session With Invalid Movie ID
     [Documentation]    Tentativa de criar sessão com ID de filme inválido
@@ -122,15 +109,11 @@ TC051 - Create Data Session With Invalid Movie ID
     ${admin_token}=    Get Admin Token
     ${theaters_response}=    Get All Theaters    expected_status=200
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
-    
-    Run Keyword If    ${theaters_count} > 0
-    ...    Run Keywords
-    ...    ${theater_id}=    Set Variable    ${theaters_response.json()}[data][0][_id]
-    ...    AND    ${future_datetime}=    Get Future Datetime    hours=24
-    ...    AND    ${response}=    Create Data Session    ${admin_token}    invalid_movie_id    ${theater_id}    ${future_datetime}    20    10    expected_status=404
-    ...    AND    Should Be Error Response    ${response}    404
-    ...    ELSE
-    ...    Log    Não há salas disponíveis para teste
+
+    ${theater_id}=    Set Variable    ${theaters_response.json()}[data][0][_id]
+    ${future_datetime}=    Get Future Datetime    hours=24
+    ${response}=    Create Data Session    ${admin_token}    invalid_movie_id    ${theater_id}    ${future_datetime}    20    10    expected_status=404
+    Should Be Error Response    ${response}    404
 
 TC052 - Create Data Session With Invalid Theater ID
     [Documentation]    Tentativa de criar sessão com ID de sala inválido
@@ -139,14 +122,10 @@ TC052 - Create Data Session With Invalid Theater ID
     ${movies_response}=    Get All Movies    expected_status=200
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     
-    Run Keyword If    ${movies_count} > 0
-    ...    Run Keywords
-    ...    ${movie_id}=    Set Variable    ${movies_response.json()}[data][0][_id]
-    ...    AND    ${future_datetime}=    Get Future Datetime    hours=24
-    ...    AND    ${response}=    Create Data Session    ${admin_token}    ${movie_id}    invalid_theater_id    ${future_datetime}    20    10    expected_status=404
-    ...    AND    Should Be Error Response    ${response}    404
-    ...    ELSE
-    ...    Log    Não há filmes disponíveis para teste
+    ${movie_id}=    Set Variable    ${movies_response.json()}[data][0][_id]
+    ${future_datetime}=    Get Future Datetime    hours=24
+    ${response}=    Create Data Session    ${admin_token}    ${movie_id}    invalid_theater_id    ${future_datetime}    20    10    expected_status=404
+    Should Be Error Response    ${response}    404
 
 TC053 - Create Data Session With Invalid Data
     [Documentation]    Tentativa de criar sessão com dados inválidos
@@ -168,10 +147,7 @@ TC054 - Update Data Session As Admin
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
     
-    Run Keyword If    ${movies_count} > 0 and ${theaters_count} > 0
-    ...    Create And Update Data Session    ${admin_token}    ${movies_response}    ${theaters_response}
-    ...    ELSE
-    ...    Log    Não há recursos disponíveis para teste de atualização
+    Create And Update Data Session    ${admin_token}    ${movies_response}    ${theaters_response}
 
 TC055 - Update Data Session With Partial Data
     [Documentation]    Atualizar apenas alguns campos da sessão
@@ -184,10 +160,7 @@ TC055 - Update Data Session With Partial Data
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
     
-    Run Keyword If    ${movies_count} > 0 and ${theaters_count} > 0
-    ...    Create And Update Data Session Partial    ${admin_token}    ${movies_response}    ${theaters_response}
-    ...    ELSE
-    ...    Log    Não há recursos disponíveis para teste
+    Create And Update Data Session Partial    ${admin_token}    ${movies_response}    ${theaters_response}
 
 TC056 - Update Non-Existent Session
     [Documentation]    Tentativa de atualizar sessão que não existe
@@ -207,11 +180,8 @@ TC057 - Delete Data Session As Admin
     
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
-    
-    Run Keyword If    ${movies_count} > 0 and ${theaters_count} > 0
-    ...    Create And Delete Data Session    ${admin_token}    ${movies_response}    ${theaters_response}
-    ...    ELSE
-    ...    Log    Não há recursos disponíveis para teste de deleção
+
+    Create And Delete Data Session    ${admin_token}    ${movies_response}    ${theaters_response}
 
 TC058 - Delete Non-Existent Session
     [Documentation]    Tentativa de deletar sessão que não existe
@@ -249,14 +219,10 @@ TC062 - Reset Data Session Seats As Admin
     ${sessions_response}=    Get All Data Sessions    expected_status=200
     ${sessions_count}=    Get Length    ${sessions_response.json()}[data]
     
-    Run Keyword If    ${sessions_count} > 0
-    ...    Run Keywords
-    ...    ${session_id}=    Set Variable    ${sessions_response.json()}[data][0][_id]
-    ...    AND    ${response}=    Reset Data Session Seats    ${admin_token}    ${session_id}    expected_status=200
-    ...    AND    Should Be Success Response    ${response}    200
-    ...    AND    Should Contain    ${response.json()}[message]    reset
-    ...    ELSE
-    ...    Log    Não há sessões disponíveis para resetar
+    ${session_id}=    Set Variable    ${sessions_response.json()}[data][0][_id]
+    ${response}=    Reset Data Session Seats    ${admin_token}    ${session_id}    expected_status=200
+    Should Be Success Response    ${response}    200
+    Should Contain    ${response.json()}[message]    reset
 
 TC063 - Reset Seats Without Admin Rights
     [Documentation]    Tentativa de resetar assentos sem ser admin
@@ -282,11 +248,8 @@ TC065 - Complete Session CRUD Flow
     
     ${movies_count}=    Get Length    ${movies_response.json()}[data]
     ${theaters_count}=    Get Length    ${theaters_response.json()}[data]
-    
-    Run Keyword If    ${movies_count} > 0 and ${theaters_count} > 0
-    ...    Execute Complete CRUD Flow    ${admin_token}    ${movies_response}    ${theaters_response}
-    ...    ELSE
-    ...    Log    Não há recursos disponíveis para teste de CRUD completo
+
+    Execute Complete CRUD Flow    ${admin_token}    ${movies_response}    ${theaters_response}
 
 *** Keywords ***
 Get Future Datetime
@@ -359,23 +322,18 @@ Execute Complete CRUD Flow
     ${theater_id}=    Set Variable    ${theaters_response.json()}[data][0][_id]
     ${future_datetime}=    Get Future Datetime    hours=48
     
-    # Create
     ${create_response}=    Create Data Session    ${admin_token}    ${movie_id}    ${theater_id}    ${future_datetime}    20    10    expected_status=201
     Should Be Success Response    ${create_response}    201
     ${session_id}=    Extract Session ID From Response    ${create_response}
     
-    # Read
     ${get_response}=    Get Session By ID    ${session_id}    expected_status=200
     Should Be Success Response    ${get_response}    200
     
-    # Update
     ${update_response}=    Update Data Session    ${admin_token}    ${session_id}    full_price=25    expected_status=200
     Should Be Success Response    ${update_response}    200
     
-    # Delete
     ${delete_response}=    Delete Data Session    ${admin_token}    ${session_id}    expected_status=200
     Should Be Success Response    ${delete_response}    200
-    
-    # Verify deletion
+
     ${verify_response}=    Get Session By ID    ${session_id}    expected_status=404
     Should Be Error Response    ${verify_response}    404
