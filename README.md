@@ -7,7 +7,8 @@ Este é um projeto de automação de testes para um sistema de cinema, desenvolv
 ```
 test-cinema-challenge/
 ├── lib/                          # Bibliotecas e recursos do projeto
-│   ├── resources/               # Arquivos de recursos do Robot Framework
+│   ├── database/api.py           #rescursos com pymongo e bcrypt para integrar com banco de dados
+├── resources/               # Arquivos de recursos do Robot Framework
 │   │   ├── api/                 # Recursos para APIs
 │   │   │   ├── auth.resource
 │   │   │   ├── movies.resource
