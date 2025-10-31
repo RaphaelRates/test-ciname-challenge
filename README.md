@@ -74,7 +74,8 @@ test-cinema-challenge/
 - Robot Framework
 - Bibliotecas do Robot Framework:
   - RequestsLibrary (para testes de API)
-  - SeleniumLibrary (para testes de interface)
+  - Faker
+  - JsonLoader
   - Collections
   - String
 
@@ -116,6 +117,18 @@ robot tests/server/reservations.robot
 
 # Testes de sessões
 robot tests/server/sessions.robot
+
+# Testes de autenticação
+robot tests/web/auth.robot
+
+# Testes de filmes
+robot tests/web/movies.robot
+
+# Testes de reservas
+robot tests/web/init.robot
+
+# Testes de sessões
+robot tests/web/profile.robot
 ```
 
 ## 📊 Estrutura de Testes
